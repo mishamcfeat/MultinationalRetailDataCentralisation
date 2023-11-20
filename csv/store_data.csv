@@ -1,0 +1,1293 @@
+index,address,longitude,lat,locality,store_code,staff_numbers,opening_date,store_type,latitude,country_code,continent
+1,"Flat 72W
+Sally isle
+East Deantown
+E7B 8EB, High Wycombe",51.62907,,High Wycombe,HI-9B97EE4E,34,1996-10-25,Local,-0.74934,GB,Europe
+2,"Heckerstraße 4/5
+50491 Säckingen, Landshut",48.52961,,Landshut,LA-0772C7B9,92,2013-04-12,Super Store,12.16179,DE,Europe
+3,"5 Harrison tunnel
+South Lydia
+WC9 2BE, Westbury",51.26,,Westbury,WE-1DE82CEE,69,2014-01-02,Super Store,-2.1875,GB,Europe
+4,"Studio 6
+Stephen landing
+South Simon
+B77 2WA, Belper",53.0233,,Belper,BE-18074576,35,2019-09-09,Local,-1.48119,GB,Europe
+5,"Flat 92u
+Christian harbors
+Port Charlotte
+N57 8FJ, Gainsborough",53.38333,,Gainsborough,GA-CAD01AC2,36,1995-05-15,Local,-0.76667,GB,Europe
+6,"7 Gillian rue
+West Robertside
+PH4 8NY, Rutherglen",55.82885,,Rutherglen,RU-C603E990,92,2001-01-04,Super Store,-4.21376,GB,Europe
+7,"Lilija-Heß-Allee 660
+34566 Regensburg, Stuttgart",48.78232,,Stuttgart,ST-229D997E,34,2000-06-01,Local,9.17702,DE,Europe
+8,"510 Jill Mill
+South Laura, FL 38723, Kaukauna",44.27804,,Kaukauna,KA-FA7ED3B8,31,2022-09-05,Local,-88.27205,US,America
+9,"3 Lee valleys
+West Janetview
+DY4M 2RL, Hartley",51.38673,,Hartley,HA-974352FE,20,2004-09-11,Local,0.30367,GB,Europe
+10,"8 Gareth skyway
+Simmonsview
+SW4 7PL, Rutherglen",55.82885,,Rutherglen,RU-9F1136B4,32,October 2012 08,Local,-4.21376,GB,Europe
+11,"Bergerstr. 1/3
+59183 Seelow, Siegburg",50.80019,,Siegburg,SI-ECD52CD9,25,July 2015 14,Local,7.20769,DE,Europe
+12,"Flat 37
+Bennett expressway
+New Charlotte
+SY8R 5WE, Devizes",51.35084,,Devizes,DE-585399CF,36,2014-10-11,Local,-1.99421,GB,Europe
+13,"520 Fisher Inlet Suite 594
+Port Eric, IL 71753, Crystal Lake",42.24113,,Crystal Lake,CR-792AA8BB,138,2018-04-05,Super Store,-88.3162,US,America
+14,"Herma-Rädel-Gasse 29
+74557 Fulda, Halstenbek",53.63333,,Halstenbek,HA-39A446E2,38,1994-03-08,Local,9.85,DE,Europe
+15,"4 Teresa lodge
+West Mathewchester
+SP39 3UZ, Lancing",50.82882,,Lancing,LA-9B0D9277,39,2020-06-05,Local,-0.32247,GB,Europe
+16,"74 Mills route
+Laurahaven
+PL4R 6HA, Newbury",51.40148,,Newbury,NE-1D8B1D0C,33,2004-05-02,Local,-1.32471,GB,Europe
+17,"9 Ryan springs
+Lake Allan
+E0 1AW, Lymington",50.75767,,Lymington,LY-4C3D5D6C,36,2016-02-12,Local,-1.5443,GB,eeEurope
+18,"Studio 80d
+Holly cliffs
+Ianport
+G4F 4HR, Chapletown",53.46506,,Chapletown,CH-6A561423,34,2008-01-21,Local,-1.47217,GB,Europe
+19,"59 Lee drives
+Georginaview
+OL93 1GX, Barnet",51.65,,Barnet,BA-898BDED3,109,2022-08-01,Super Store,-0.2,GB,Europe
+20,"Flat 83
+Shirley parkway
+Sylviashire
+N0 5AQ, East Dereham",52.68333,,East Dereham,EA-77ECA680,8,1994-08-12,Mall Kiosk,0.93333,GB,Europe
+21,"Flat 28
+Kirby villages
+West Vincent
+CV4 0RT, Poulton-le-Fylde",53.83333,,Poulton-le-Fylde,PO-38790FAE,25,2010-10-19,Local,-2.98333,GB,Europe
+22,"Studio 00p
+George point
+West Barbara
+S5J 3JT, Bushey",51.64316,,Bushey,BU-251A0E5A,35,2013-08-05,Local,-0.36053,GB,Europe
+23,"Rena-Karz-Gasse 574
+66493 Olpe, Ehingen",48.28259,,Ehingen,EH-91356030,38,2017-12-12,Local,9.72749,DE,Europe
+24,"Flat 43d
+Hall street
+Susanshire
+KA9 8HF, Aberdeen",57.14369,,Aberdeen,AB-917B715E,119,2002-06-18,Super Store,-2.09814,GB,Europe
+25,"12 William underpass
+South Brettland
+L3K 8BB, Surbiton",51.39148,,Surbiton,SU-0B4C9A5F,28,2007-06-24,Local,-0.29825,GB,Europe
+26,"08 Brenda valleys
+North Stewartborough
+TQ32 7FS, Inverness",57.47908,,Inverness,IN-157E1191,29,2017-11-04,Local,-4.22398,GB,Europe
+27,"Studio 94
+Tina freeway
+Woodshaven
+YO93 9TU, Gainsborough",53.38333,,Gainsborough,GA-DA8EEA4A,29,2008-07-08,Local,-0.76667,GB,Europe
+28,"Flat 8
+Cooper estates
+Reidchester
+KY14 4PW, Lancing",50.82882,,Lancing,LA-2B59A825,25,1998-12-23,Local,-0.32247,GB,Europe
+29,"Köhlerring 00
+08489 Fulda, Weimar",50.9803,,Weimar,WE-31C8B335,27,2011-03-11,Local,11.32903,DE,Europe
+30,"Häringstr. 481
+62852 Kamenz, Landshut",48.52961,,Landshut,LA-F1042C48,34,2010-08-25,Local,12.16179,DE,Europe
+31,"Flat 69
+Suzanne walk
+East Michelle
+E80 8HS, East Dereham",52.68333,,East Dereham,EA-24B31935,J78,2012-11-09,Outlet,0.93333,GB,Europe
+32,"Flat 7
+Chambers shoals
+Carolyntown
+SM2 0FQ, East Dereham",52.68333,,East Dereham,EA-7965E06D,96,2016-10-07,Super Store,0.93333,GB,Europe
+33,"Studio 1
+Davidson harbor
+Sheppardview
+M9J 9LW, Penzance",50.11861,,Penzance,PE-040B15C3,135,2018-08-15,Super Store,-5.53715,GB,Europe
+34,"Sabina-Baum-Platz 4
+10599 Wanzleben, Ehingen",48.28259,,Ehingen,EH-DB8676C1,28,1996-10-02,Local,9.72749,DE,Europe
+35,"Fechnerweg 6
+72000 Greiz, Albstadt",48.21644,,Albstadt,AL-91D3A03C,30,2018-06-18,Local,9.02596,DE,Europe
+36,"Kensyring 567
+46539 Oschatz, Hechingen",48.35149,,Hechingen,HE-E39F4BC6,31,1995-06-04,Local,8.96317,DE,Europe
+37,"978 Daniel viaduct
+Johnsonville
+E1A 7TW, Poulton-le-Fylde",53.83333,,Poulton-le-Fylde,PO-47A01287,29,1994-10-18,Local,-2.98333,GB,Europe
+38,"Flat 8
+Grace radial
+Georginashire
+W06 1BZ, Lancing",50.82882,,Lancing,LA-D78C5F3F,28,2002-07-21,Local,-0.32247,GB,Europe
+39,"Studio 55A
+Ali brooks
+Pearceburgh
+SW8 2RT, Mexborough",53.49389,,Mexborough,ME-31958763,90,2013-12-23,Outlet,-1.29243,GB,Europe
+40,"420 Harrison way
+Whitemouth
+E4 5RZ, Arbroath",56.56317,,Arbroath,AR-5E72668B,34,2006-10-04,Local,-2.58736,GB,Europe
+41,"7 Sophie ways
+East Kevinborough
+TD1M 0FG, Cowes",50.76306,,Cowes,CO-CB3D8C89,120,1999-07-17,Super Store,-1.29772,GB,Europe
+42,"Studio 46k
+Phillips hollow
+South Eileen
+G21 2EA, Clacton-on-Sea",51.78967,,Clacton-on-Sea,CL-5C7C3198,50,1998-12-19,Outlet,1.15597,GB,Europe
+43,"92863 Kathryn Ford Suite 747
+East Craig, DC 24439, Boston",42.35843,,Boston,BO-17E7B6CE,75,2019-07-28,Super Store,-71.05977,US,America
+44,"Bertold-Nette-Allee 7/8
+32669 Chemnitz, Charlottenburg-Nord",52.53048,,Charlottenburg-Nord,CH-619E036C,118,2017-10-21,Super Store,13.29371,DE,Europe
+45,"Lindauweg 7
+89647 Luckau, Bretten",49.03685,,Bretten,BR-BC499EDD,37,2020-05-13,Local,8.70745,DE,Europe
+46,"Flat 85Q
+George field
+Barrettbury
+BS2B 5WR, Newbury",51.40148,,Newbury,NE-E50207AD,67,2019-12-24,Super Store,-1.32471,GB,eeEurope
+47,"2 Jade corners
+South Ashleybury
+W1 0RE, Belper",53.0233,,Belper,BE-8C0CF738,26,2002-04-03,Local,-1.48119,GB,Europe
+48,"Studio 1
+Brandon branch
+Francescaview
+TD4N 2XL, Newbury",51.40148,,Newbury,NE-374D3983,20,2009-08-07,Local,-1.32471,GB,eeEurope
+49,"0493 Alicia Station Suite 475
+Elizabethfort, RI 70019, Sun City Center",27.71809,,Sun City Center,SU-95D20AE9,30,2004-05-23,Local,-82.35176,US,America
+50,"9 Parker lake
+West Edwardview
+SP04 5ZX, Mexborough",53.49389,,Mexborough,ME-FB62E459,40,2001-07-11,Local,-1.29243,GB,Europe
+51,"Mosemannstr. 81
+30877 Schrobenhausen, Karben",50.23019,,Karben,KA-653E783F,36,1998-07-07,Local,8.77155,DE,Europe
+52,"220 Holt Unions Suite 688
+Ramirezstad, IL 74968, Martinsburg",39.45621,,Martinsburg,MA-F0E23355,8,2011-07-07,Mall Kiosk,-77.96389,US,America
+53,"Trommlerstr. 7/5
+75372 Wolfach, Oschatz",51.30001,,Oschatz,OS-70B2CD28,36,2007-02-04,Local,13.10984,DE,Europe
+54,"Flat 26c
+Walker creek
+South Mary
+HU8X 8YP, Kingston upon Hull",53.7446,,Kingston upon Hull,KI-A53AF10A,6,1993-10-13,Mall Kiosk,-0.33525,GB,Europe
+55,"Flat 40w
+Thomas wall
+South Susan
+LL4 8LG, Leyland",53.69786,,Leyland,LE-63F3D33B,25,2006-06-16,Local,-2.68758,GB,Europe
+56,"9066 Rosales Port Suite 675
+Meyerville, NV 79336, Venice",27.09978,,Venice,VE-93DA8430,22,2006-02-23,Local,-82.45426,US,eeAmerica
+57,"Studio 57
+Edwards springs
+Johnsonbury
+B52 8TN, High Wycombe",51.62907,,High Wycombe,HI-BAD4DD1C,24,2019-09-08,Local,-0.74934,GB,Europe
+58,"664 Andrew land
+New Mohammadhaven
+N07 9JZ, Rutherglen",55.82885,,Rutherglen,RU-1994A94D,83,1993-09-03,Outlet,-4.21376,GB,Europe
+59,"21 Michael plains
+Port Garethburgh
+BL6 5PJ, Leyland",53.69786,,Leyland,LE-84C48B9F,138,2002-01-18,Super Store,-2.68758,GB,Europe
+60,"Baumstraße 904
+47265 Hildesheim, Schleswig",54.52156,,Schleswig,SC-4928418D,82,2009-04-14,Super Store,9.5586,DE,Europe
+61,"Martha-Dörr-Platz 1/3
+53035 Bad Mergentheim, Eppingen",49.13645,,Eppingen,EP-105C3FB5,27,2014-07-16,Local,8.91229,DE,Europe
+62,"446 Edwards circle
+South Dean
+S5 5NT, Chapletown",53.46506,,Chapletown,CH-7771B336,32,2012-05-15,Local,-1.47217,GB,Europe
+63,6FWDZHD7PW,1ZVU03X2P6,13KJZ890JH,9IBH8Y4Z0S,NRQKZWJ9OZ,BIP8K8JJW2,ZCXWWKF45G,QP74AHEQT0,1CJ5OAU4BR,YELVM536YT,QMAVR5H3LD
+64,"Heinrichgasse 96
+70197 Sömmerda, Losheim",49.5099,,Losheim,LO-AB6B6DF8,117,2006-01-13,Super Store,6.74549,DE,Europe
+65,"Mario-Wirth-Gasse 598
+60452 Cloppenburg, Burscheid",51.08468,,Burscheid,BU-44F16401,22,2019-01-11,Local,7.11393,DE,Europe
+66,"Studio 44
+Lynda village
+New Alexanderbury
+N66 2PJ, Rutherglen",55.82885,,Rutherglen,RU-9DF20437,7,1994-05-26,Mall Kiosk,-4.21376,GB,Europe
+67,"Magarete-Caspar-Weg 37
+58039 Melsungen, Ehingen",48.28259,,Ehingen,EH-DB65F258,21,2015-02-16,Local,9.72749,DE,Europe
+68,"Flat 81A
+Leonard glens
+East Kayleigh
+N8J 4SX, Southsea",50.79205,,Southsea,SO-6D328417,132,2002-03-30,Super Store,-1.08593,GB,Europe
+69,"406 Charles Ramp
+Port Jessicaview, WI 37544, Porterville",36.06523,,Porterville,PO-EB96293A,36,2003-04-19,Local,-119.01677,US,America
+70,"Gorlitzweg 0/4
+49302 Waldmünchen, Walsrode",52.86147,,Walsrode,WA-34998EB8,7,2017-04-15,Mall Kiosk,9.5926,DE,Europe
+71,"Studio 9
+Dunn summit
+Thomasfurt
+RH8 4TZ, Exeter",50.7236,,Exeter,EX-2C210EBF,37,1997-01-16,Local,-3.52751,GB,Europe
+72,"122 Gray heights
+Holmesview
+S2U 7LP, Chapletown",53.46506,,Chapletown,CH-164A23FB,29,2017-10-11,Local,-1.47217,GB,Europe
+73,"Studio 13
+Russell ports
+South Ricky
+CR3B 4BA, Gainsborough",53.38333,,Gainsborough,GA-BA05E5A8,131,2012-08-16,Super Store,-0.76667,GB,Europe
+74,"942 Field passage
+Scottland
+WD85 7UG, Chapletown",53.46506,,Chapletown,CH-A44B48E6,130,1998-12-12,Super Store,-1.47217,GB,Europe
+75,"77 Jordan corner
+New Kathleen
+SP0 9HU, Thetford",52.41667,,Thetford,TH-D62B06B7,26,1996-04-19,Local,0.75,GB,Europe
+76,"Yusuf-Christoph-Straße 784
+00736 Koblenz, Landshut",48.52961,,Landshut,LA-6AAC1779,70,2001-08-01,Outlet,12.16179,DE,Europe
+77,"91374 Stanley Rapid Apt. 083
+South Christian, MI 26541, Morningside Heights",40.81,,Morningside Heights,MO-E8CFF8FE,40,2004-12-19,Local,-73.9625,US,America
+78,"Ottomar-Gutknecht-Platz 7
+52829 Fulda, Losheim",49.5099,,Losheim,LO-D54E72B5,20,1998-12-20,Local,6.74549,DE,Europe
+79,"35 Collier tunnel
+East Nicola
+LA0 9LZ, East Dereham",52.68333,,East Dereham,EA-BE6D0CF8,29,1999-11-14,Local,0.93333,GB,Europe
+80,"Studio 26
+Anderson plain
+Williamston
+BT4P 5NN, Belper",53.0233,,Belper,BE-F4596696,23,2008-02-04,Local,-1.48119,GB,Europe
+81,"Vincenzo-Lübs-Weg 8
+59427 Eisenberg, Weimar",50.9803,,Weimar,WE-5B0343D9,51,2009-08-19,Outlet,11.32903,DE,Europe
+82,"Zahnstraße 7/0
+50265 Plauen, Schleswig",54.52156,,Schleswig,SC-8724E112,118,2002-09-30,Super Store,9.5586,DE,eeEurope
+83,"5608 Jason Falls Apt. 917
+Ericaside, ND 55443, Searcy",35.25064,,Searcy,SE-F428A035,34,2012-05-10,Local,-91.73625,US,America
+84,"154 Arthur view
+Port Emma
+N5 6SH, Surbiton",51.39148,,Surbiton,SU-40E3321A,127,2010-03-16,Super Store,-0.29825,GB,Europe
+85,"549 Watson highway
+Marcusport
+E2 3WZ, Exeter",50.7236,,Exeter,EX-9ED6711E,4,1999-12-10,Mall Kiosk,-3.52751,GB,Europe
+86,"772 Jacqueline brook
+Lake Derek
+N2J 0ZZ, Bushey",51.64316,,Bushey,BU-550D8325,33,2018-02-18,Local,-0.36053,GB,Europe
+87,"Gießring 51
+99214 Querfurt, Landshut",48.52961,,Landshut,LA-9F489A77,34,2011-05-02,Local,12.16179,DE,Europe
+88,"Kirsten-Geißler-Allee 5
+87776 Pinneberg, Radevormwald",51.20219,,Radevormwald,RA-583F0CF9,135,2010-03-15,Super Store,7.36027,DE,Europe
+89,"268 Johnson keys
+West Josephinehaven
+W1 7ST, Newbury",51.40148,,Newbury,NE-01250B4B,30,2021-03-12,Local,-1.32471,GB,Europe
+90,"Cosimo-Rose-Ring 1/5
+86826 Dieburg, Charlottenburg-Nord",52.53048,,Charlottenburg-Nord,CH-7C155EA7,110,2011-03-27,Super Store,13.29371,DE,Europe
+91,"Manja-Wirth-Ring 7
+99585 Grimma, Stade",53.59337,,Stade,ST-4D2E1D55,30,2005-04-28,Local,9.47629,DE,Europe
+92,"Studio 43
+Liam club
+New Garyview
+HX7 3PG, Arbroath",56.56317,,Arbroath,AR-2D9D5CD3,5,2000-12-29,Mall Kiosk,-2.58736,GB,Europe
+93,"14577 Thomas Station
+North Andrew, SD 63439, Mira Mesa",32.9156,,Mira Mesa,MI-20EE1BFA,20,2006-07-07,Local,-117.14392,US,America
+94,"823 Caroline curve
+Jasmineberg
+B4G 7ZZ, Strood",51.39323,,Strood,ST-119B11EA,81,2022/01/20,Outlet,0.47713,GB,Europe
+95,"Steffen-Boucsein-Straße 1
+45299 Osterburg, Burscheid",51.08468,,Burscheid,BU-89E4DEC5,7,2017-01-09,Mall Kiosk,7.11393,DE,Europe
+96,"Cichoriusplatz 61
+10993 Niesky, Verl",51.88333,,Verl,VE-B81F9500,4,2000-07-10,Mall Kiosk,8.51667,DE,Europe
+97,"Marvin-Schmiedt-Straße 40
+41235 Erkelenz, Wesseling",50.82709,,Wesseling,WE-DC3933D4,21,1997-08-29,Local,6.9747,DE,Europe
+98,"Studio 26
+Paula coves
+East Samuelfurt
+EH17 8TE, Clacton-on-Sea",51.78967,,Clacton-on-Sea,CL-0FB1065C,28,2021-04-17,Local,1.15597,GB,Europe
+99,"Walli-Ullrich-Ring 94
+22096 Mallersdorf, Pfullingen",48.46458,,Pfullingen,PF-D90B564A,6,1997-12-01,Mall Kiosk,9.22796,DE,Europe
+100,"Geißlerplatz 5
+53713 Nördlingen, Bensheim",49.68369,,Bensheim,BE-028A2748,85,2005-10-31,Outlet,8.61839,DE,Europe
+101,"Flat 56X
+Wayne fields
+Webbside
+BL8R 2QU, Southsea",50.79205,,Southsea,SO-6D546AD2,41,2011-09-25,Outlet,-1.08593,GB,Europe
+102,"0 Molly keys
+Duncanton
+HD7Y 4DU, High Wycombe",51.62907,,High Wycombe,HI-BED70096,57,1994-11-01,Outlet,-0.74934,GB,Europe
+103,"64 Hayes crossing
+Port Ellieville
+G7S 1XQ, Walton-on-the-Naze",51.84819,,Walton-on-the-Naze,WA-FF3389AF,4,2001-02-16,Mall Kiosk,1.26738,GB,Europe
+104,"822 Marsh mews
+Francishaven
+BR3X 2XJ, Chapletown",53.46506,,Chapletown,CH-7E92F288,7,2003-08-08,Mall Kiosk,-1.47217,GB,Europe
+105,"Minna-Juncken-Gasse 906
+83233 Husum, Friedberg",48.35693,,Friedberg,FR-C04291C3,33,2012-02-15,Local,10.98461,DE,Europe
+106,"Sauerring 09
+84370 Bernburg, Stuttgart",48.78232,,Stuttgart,ST-B754F535,33,2021-06-26,Local,9.17702,DE,Europe
+107,"Flat 84
+Morrison freeway
+Wardbury
+EC62 7LZ, Arbroath",56.56317,,Arbroath,AR-E8FDEB2B,20,2010-07-15,Local,-2.58736,GB,Europe
+108,"Flat 9
+Morris well
+Webbmouth
+W7 6FF, Lymington",50.75767,,Lymington,LY-FC3B1157,37,1993-05-06,Local,-1.5443,GB,Europe
+109,"0 Smith camp
+Masonchester
+SK23 1WD, Belper",53.0233,,Belper,BE-09F94471,34,2012-09-15,Local,-1.48119,GB,Europe
+110,"Flat 60t
+Berry squares
+Clarkstad
+CR0 6RQ, Gainsborough",53.38333,,Gainsborough,GA-400CC35C,7,2021-06-16,Mall Kiosk,-0.76667,GB,Europe
+111,"Studio 82
+Rosemary drive
+Scottside
+CM7W 7XQ, Winsford",53.19146,,Winsford,WI-56B02C82,35,1999-11-05,Local,-2.52398,GB,Europe
+112,"Flat 0
+Hobbs avenue
+East Diana
+M9 8XN, High Wycombe",51.62907,,High Wycombe,HI-F2784D72,38,2008-02-27,Local,-0.74934,GB,Europe
+113,"Studio 6
+Anthony drive
+New Ricky
+WF8 6HA, Mexborough",53.49389,,Mexborough,ME-D9ECD7DF,21,2019-07-12,Local,-1.29243,GB,Europe
+114,"7 Saunders divide
+East Malcolm
+W2 5FA, Leyland",53.69786,,Leyland,LE-14B7245B,102,2022-08-31,Super Store,-2.68758,GB,Europe
+115,"7 Richards stravenue
+West Allan
+S1T 1BY, Rutherglen",55.82885,,Rutherglen,RU-AE12736B,29,2008-03-27,Local,-4.21376,GB,Europe
+116,"4 Taylor plaza
+Deanview
+L1 2XR, Lancing",50.82882,,Lancing,LA-DE474D42,36,2019-08-07,Local,-0.32247,GB,Europe
+117,"Linkeallee 7/3
+66084 Füssen, Karben",50.23019,,Karben,KA-9D87BC15,69,2010-07-23,Super Store,8.77155,DE,Europe
+118,"Flat 62
+Ellis mountain
+Brettport
+RM53 0AQ, Chapletown",53.46506,,Chapletown,CH-DCCDE05E,29,2013-11-17,Local,-1.47217,GB,Europe
+119,"Flat 1
+Beverley islands
+Lake Sheila
+M8 1UU, Chapletown",53.46506,,Chapletown,CH-FBB32B94,30,2011-06-18,Local,-1.47217,GB,Europe
+120,"Knappering 09
+35944 Wertingen, Stade",53.59337,,Stade,ST-10F19C97,20,2001-11-28,Local,9.47629,DE,Europe
+121,"694 Parker Unions
+South Rebeccatown, GU 66824, Newburgh",41.50343,,Newburgh,NE-C83B8B22,21,2014-07-03,Local,-74.01042,US,America
+122,"Studio 66K
+Chloe road
+Stanleyberg
+S0 6NE, Selby",53.78333,,Selby,SE-8DF6557B,20,2020 February 01,Local,-1.06667,GB,Europe
+123,"247 Melanie forge
+North Nathan
+N70 7ZZ, Surbiton",51.39148,,Surbiton,SU-346D5CF2,31,2021-02-27,Local,-0.29825,GB,Europe
+124,"22 Hussain rue
+Boothport
+M24 9LZ, Bushey",51.64316,,Bushey,BU-784362E0,127,2015-12-13,Super Store,-0.36053,GB,Europe
+125,"Studio 45r
+West falls
+Traceyfurt
+L7 9NA, Arbroath",56.56317,,Arbroath,AR-0C5116E4,82,2008-09-01,Outlet,-2.58736,GB,Europe
+126,"Keudelallee 65
+00759 Mallersdorf, Oberhausen",51.47805,,Oberhausen,OB-7A4A9012,20,1996-06-05,Local,6.8625,DE,Europe
+127,"Seipallee 4
+20802 Göppingen, Radevormwald",51.20219,,Radevormwald,RA-2A22B217,103,2007-02-03,Super Store,7.36027,DE,Europe
+128,"Studio 39t
+Gavin drives
+Cartwrightberg
+CH1 6SJ, Westbury",51.26,,Westbury,WE-605028E4,32,1993-09-28,Local,-2.1875,GB,Europe
+129,"Zimmerweg 693
+26271 Havelberg, Pfullingen",48.46458,,Pfullingen,PF-1D7B0646,68,1995-11-07,Super Store,9.22796,DE,Europe
+130,"Flat 0
+Taylor grove
+Jamesshire
+G1D 5RD, Lancing",50.82882,,Lancing,LA-77BE2ADA,37,2002-08-16,Local,-0.32247,GB,eeEurope
+131,"Hans-Eberhard-Franke-Gasse 1/0
+40343 Rostock, Zeitz",51.04962,,Zeitz,ZE-BBF02AEA,31,2002-07-30,Local,12.1369,DE,Europe
+132,"Studio 35o
+Sylvia place
+Howardstad
+TS14 7XJ, Viewpark",55.82737,,Viewpark,VI-BCBBC21A,90,2014-09-03,Outlet,-4.0573,GB,Europe
+133,"9 Tom gardens
+Shanefurt
+CV4X 0LU, Winsford",53.19146,,Winsford,WI-37616D0E,37,2000-08-19,Local,-2.52398,GB,Europe
+134,"847 Joe spur
+Marshallmouth
+M71 2LP, Rhosllanerchrugog",53.00974,,Rhosllanerchrugog,RH-F3E200B7,6,2006-07-26,Mall Kiosk,-3.05814,GB,Europe
+135,"984 Marshall causeway
+West Francis
+CF8W 2BQ, Bushey",51.64316,,Bushey,BU-19BB50F6,31,2007-02-28,Local,-0.36053,GB,Europe
+136,"Süßebiergasse 4
+30238 Mettmann, Marburg an der Lahn",50.80904,,Marburg an der Lahn,MA-316BDC6E,83,2011-11-06,Outlet,8.77069,DE,Europe
+137,"Studio 01
+Reynolds skyway
+Lake Martynmouth
+RG9A 5QL, Clacton-on-Sea",51.78967,,Clacton-on-Sea,CL-C183BE4B,99,1998-12-19,Super Store,1.15597,GB,Europe
+138,"39869 Jessica Square Suite 441
+Barbaraborough, NV 37780, Waverly",42.7392,,Waverly,WA-F4396DF8,29,1993-11-24,Local,-84.62081,US,America
+139,"Eleni-Trommler-Allee 180
+78345 Stendal, Marburg an der Lahn",50.80904,,Marburg an der Lahn,MA-0D207813,66,1995-12-30,Outlet,8.77069,DE,Europe
+140,"Flat 84
+Irene track
+Hammondhaven
+KY28 0FZ, Poulton-le-Fylde",53.83333,,Poulton-le-Fylde,PO-99029708,51,2006-10-18,Outlet,-2.98333,GB,Europe
+141,"847 Lewis crossing
+Dayberg
+EN7 0SP, Gainsborough",53.38333,,Gainsborough,GA-190B3F6D,24,2003-04-07,Local,-0.76667,GB,eeEurope
+142,"Studio 7
+Patel motorway
+Stevenburgh
+B0C 8JF, Bushey",51.64316,,Bushey,BU-5B54171E,37,1997-02-07,Local,-0.36053,GB,Europe
+143,"Eugenie-Pruschke-Straße 5
+31111 Badibling, Memmingen",47.98372,,Memmingen,ME-9940FF73,7,May 2003 27,Mall Kiosk,10.18527,DE,Europe
+144,"Flat 7
+Bond passage
+Port Katefurt
+CA9 5AX, Clacton-on-Sea",51.78967,,Clacton-on-Sea,CL-DA5365DF,39,2005-08-01,Local,1.15597,GB,Europe
+145,"0 Wall cliff
+East Kevin
+ML7A 6LS, Surbiton",51.39148,,Surbiton,SU-5F78B30A,29,2006-02-20,Local,-0.29825,GB,Europe
+146,"Studio 89H
+Clark trafficway
+Lake Joanna
+KY9 4SZ, Lymington",50.75767,,Lymington,LY-89B9F675,29,1994-08-09,Local,-1.5443,GB,Europe
+147,"Heinz-Wilhelm-Boucsein-Ring 6
+03556 Zerbst, Hechingen",48.35149,,Hechingen,HE-2908B53E,21,2021-02-20,Local,8.96317,DE,Europe
+148,"7 Arnold lodge
+Sophiemouth
+B3 6NN, Arbroath",56.56317,,Arbroath,AR-D3FDDD1D,124,2019-12-08,Super Store,-2.58736,GB,Europe
+149,"Erdal-Jacob-Ring 9
+39042 Bad Freienwalde, Siegburg",50.80019,,Siegburg,SI-66F97423,74,2008-03-08,Super Store,7.20769,DE,Europe
+150,"Hentschelstraße 5
+48646 Gunzenhausen, Pfullingen",48.46458,,Pfullingen,PF-BADFAEDC,8,2014-05-24,Mall Kiosk,9.22796,DE,Europe
+151,"2 Joan meadow
+Perkinsbury
+WF3 7YX, Newbury",51.40148,,Newbury,NE-EE2A190D,87,2015-02-12,Super Store,-1.32471,GB,Europe
+152,"Studio 80
+Baxter valleys
+Collinsfurt
+G0 6WT, Selby",53.78333,,Selby,SE-596EAA50,6,1994-09-10,Mall Kiosk,-1.06667,GB,Europe
+153,"Ottoplatz 4
+95953 Nürtingen, Radevormwald",51.20219,,Radevormwald,RA-C25EE56A,34,2005-01-04,Local,7.36027,DE,Europe
+154,"Hans-Christian-Zahn-Platz 856
+77913 Saulgau, Ehingen",48.28259,,Ehingen,EH-BB9AECF5,26,2006-05-22,Local,9.72749,DE,Europe
+155,"Tröstplatz 5
+15926 Wittmund, Pfullingen",48.46458,,Pfullingen,PF-F95902BC,23,2018-05-26,Local,9.22796,DE,eeEurope
+156,"78005 Steele Orchard Apt. 098
+East Jennifer, AZ 80303, Crystal Lake",42.24113,,Crystal Lake,CR-6B885B5E,25,2001-11-11,Local,-88.3162,US,America
+157,"Studio 81
+Chamberlain lights
+North Emmashire
+IP2 3AU, Hartley",51.38673,,Hartley,HA-1BAE9B71,7,2006-06-15,Mall Kiosk,0.30367,GB,Europe
+158,"Guiseppe-Bauer-Weg 775
+25489 Döbeln, Memmingen",47.98372,,Memmingen,ME-B363FDAA,22,2005-12-23,Local,10.18527,DE,Europe
+159,"Juergen-Loos-Straße 0/8
+93137 Mettmann, Trossingen",48.07667,,Trossingen,TR-4E1AF636,23,2022-06-21,Local,8.64409,DE,Europe
+160,"Flat 73c
+Ben junctions
+North Katy
+E8J 7RE, Viewpark",55.82737,,Viewpark,VI-43751A71,122,2003-11-19,Super Store,-4.0573,GB,eeEurope
+161,"Marijan-Dehmel-Straße 0/8
+24704 Germersheim, Dahlem",52.4581,,Dahlem,DA-D9DC550B,25,1998-04-22,Local,13.28702,DE,Europe
+162,"Ekrem-Tintzmann-Weg 424
+02111 Oberviechtach, Landshut",48.52961,,Landshut,LA-347073D1,28,2011-03-27,Local,12.16179,DE,Europe
+163,"Studio 00
+Murray course
+Lake Gail
+CH69 7TE, Viewpark",55.82737,,Viewpark,VI-9A93E3E2,38,2013-04-29,Local,-4.0573,GB,Europe
+164,"Haasegasse 1/3
+07219 Pinneberg, Charlottenburg-Nord",52.53048,,Charlottenburg-Nord,CH-6D105C69,5,2004-01-27,Mall Kiosk,13.29371,DE,Europe
+165,"Dunja-Oderwald-Gasse 785
+97452 Konstanz, Stuttgart",48.78232,,Stuttgart,ST-06E21C4A,23,2008-03-31,Local,9.17702,DE,Europe
+166,"Lidia-Zobel-Straße 922
+51389 Mallersdorf, Friedberg",48.35693,,Friedberg,FR-0FA7D921,31,2012-03-15,Local,10.98461,DE,eeEurope
+167,"Studio 79w
+Hazel heights
+New Harry
+E4C 8DA, Clacton-on-Sea",51.78967,,Clacton-on-Sea,CL-361E75EC,112,2001-05-20,Super Store,1.15597,GB,Europe
+168,"Flat 48W
+Thompson forest
+West Maria
+N84 4LE, Walton-on-the-Naze",51.84819,,Walton-on-the-Naze,WA-905645E6,36,2010-08-09,Local,1.26738,GB,Europe
+169,"Studio 6
+Baldwin ports
+Lake Lewis
+G2 3EE, Lymington",50.75767,,Lymington,LY-73842BE8,23,2012-11-28,Local,-1.5443,GB,Europe
+170,"Losekannplatz 687
+06653 Potsdam, Halstenbek",53.63333,,Halstenbek,HA-B6953307,8,1993-10-02,Mall Kiosk,9.85,DE,Europe
+171,"02 Norman flats
+North Nigelburgh
+WD7M 1UN, Belper",53.0233,,Belper,BE-F9462A80,100,2019-01-16,Super Store,-1.48119,GB,Europe
+172,UBCIFQLSNY,Q1TJY8H1ZH,2XE1OWOC23,1T6B406CI8,QIUU9SVP51,SKBXAXF5G5,7AHXLXIUEF,O0QJIRC943,3ZR3F89D97,FP8DLXQVGH,LU3E036ZD9
+173,"48 Willis dale
+North Dylan
+S8W 2NG, Strood",51.39323,,Strood,ST-3C93FBF2,26,2014-08-19,Local,0.47713,GB,Europe
+174,"Kruschwitzplatz 13
+02034 Hainichen, Marburg an der Lahn",50.80904,,Marburg an der Lahn,MA-20E6EB37,35,2004-09-13,Local,8.77069,DE,Europe
+175,"Studio 0
+Jennings spur
+Gregoryville
+NN3 4BB, High Wycombe",51.62907,,High Wycombe,HI-F27C7A84,71,2007-07-21,Outlet,-0.74934,GB,Europe
+176,"Flat 50
+Sam extension
+Wilsonview
+FY1W 9BA, Thetford",52.41667,,Thetford,TH-D94B2E76,30,2015-01-08,Local,0.75,GB,Europe
+177,"40 Powell lock
+Kayborough
+DG6 0ZS, Lower Earley",51.42708,,Lower Earley,LO-3DD01CA8,6,2021-06-20,Mall Kiosk,-0.91979,GB,Europe
+178,"Sontagweg 54
+94925 Erfurt, Barmbek-Nord",53.6052,,Barmbek-Nord,BA-8BA66AA0,33,2006-02-03,Local,10.03988,DE,Europe
+179,"Girschnerweg 163
+93597 Angermünde, Dahlem",52.4581,,Dahlem,DA-ACC520AE,30e,1994-03-07,Local,13.28702,DE,Europe
+180,"Sagerstr. 64
+93083 Leipziger Land, Bad Segeberg",53.94313,,Bad Segeberg,BA-3A37248A,69,2011-11-27,Super Store,10.30215,DE,Europe
+181,"Flat 25
+Chapman turnpike
+Matthewsborough
+MK0 4RG, Inverness",57.47908,,Inverness,IN-8A98027C,99,1993-03-17,Super Store,-4.22398,GB,Europe
+182,"Benthinallee 25
+56122 Schongau, Charlottenburg-Nord",52.53048,,Charlottenburg-Nord,CH-42F9D8D8,20,2005-04-26,Local,13.29371,DE,Europe
+183,"Studio 26
+Davies skyway
+West Elizabeth
+E24 2TR, Arbroath",56.56317,,Arbroath,AR-F938FB8E,27,2015-02-13,Local,-2.58736,GB,Europe
+184,"Wolf-Thies-Weg 032
+36732 Höxter, Zeitz",51.04962,,Zeitz,ZE-EA9C82AA,40,2001-02-19,Local,12.1369,DE,Europe
+185,"Studio 53
+Glen isle
+New Stewarttown
+M59 5XA, Exeter",50.7236,,Exeter,EX-41AC3888,24,2010-07-19,Local,-3.52751,GB,Europe
+186,"Flat 48U
+Clark mount
+New Allan
+BA9A 8XX, Chapletown",53.46506,,Chapletown,CH-E1344D81,28,1997-07-01,Local,-1.47217,GB,Europe
+187,"Flat 18
+Phillips lane
+Lynntown
+CF8H 8QU, Great Wyrley",52.66277,,Great Wyrley,GR-18E26E0C,34,1999-11-19,Local,-2.01111,GB,Europe
+188,"295 Foster haven
+Edwardsfurt
+M4 8ZJ, Viewpark",55.82737,,Viewpark,VI-B13ACF87,33,2000-08-02,Local,-4.0573,GB,Europe
+189,"Luka-Adolph-Platz 8/7
+49973 Halberstadt, Ehingen",48.28259,,Ehingen,EH-945D8F25,81,2000-06-28,Super Store,9.72749,DE,Europe
+190,"70 Ward center
+Port Nicola
+DT73 4WY, Bushey",51.64316,,Bushey,BU-3FC2A064,25,2016 November 25,Local,-0.36053,GB,Europe
+191,"77 Eleanor fork
+Wrightmouth
+FK9 4BH, Mexborough",53.49389,,Mexborough,ME-C1AF27C3,130,2001-03-08,Super Store,-1.29243,GB,Europe
+192,"0 Mason islands
+Lake Katyview
+L3U 0EX, Penzance",50.11861,,Penzance,PE-52B1E131,25,2012-05-02,Local,-5.53715,GB,Europe
+193,"Studio 46
+Julia points
+North Gareth
+BL4P 4NS, Rutherglen",55.82885,,Rutherglen,RU-BFF916C5,128,2001-05-23,Super Store,-4.21376,GB,eeEurope
+194,"Hülya-Reinhardt-Ring 8/8
+84222 Hannoversch Münden, Landshut",48.52961,,Landshut,LA-BC0455E1,7,2005-08-05,Mall Kiosk,12.16179,DE,Europe
+195,"55 Phillip place
+Jasmineberg
+SW6 3YS, Belper",53.0233,,Belper,BE-9A378A7F,22,2015-02-03,Local,-1.48119,GB,Europe
+196,"7 Russell greens
+New Jessica
+M5A 5GL, Lancing",50.82882,,Lancing,LA-C1E143DE,138,2006-10-03,Super Store,-0.32247,GB,Europe
+197,"Nuray-Lorch-Ring 4/0
+84116 Grevesmühlen, Nidderau",50.23805,,Nidderau,NI-D757F308,27,1997-05-01,Local,8.86704,DE,Europe
+198,"9 Chelsea trace
+Mooremouth
+CT32 6HG, Hartley",51.38673,,Hartley,HA-859769AF,30,2019-09-04,Local,0.30367,GB,Europe
+199,"Dörrstr. 4/6
+74777 Neubrandenburg, Walsrode",52.86147,,Walsrode,WA-0E6E657C,76,2013-06-04,Super Store,9.5926,DE,Europe
+200,"Flat 77
+Shaw underpass
+Lake Mandy
+G8C 2NE, Strood",51.39323,,Strood,ST-1DAA85E6,77,2014-09-17,Super Store,0.47713,GB,Europe
+201,"82 Pauline island
+Port Gail
+PA6 6XQ, Winsford",53.19146,,Winsford,WI-1BEEB9CA,137,2021-01-12,Super Store,-2.52398,GB,Europe
+202,"7 Wright run
+South Adrian
+N6A 1LX, Hartley",51.38673,,Hartley,HA-41E65DD9,119,2019-11-23,Super Store,0.30367,GB,Europe
+203,"516 Robinson Street Apt. 867
+West Donna, NJ 95809, Jersey City",40.72816,,Jersey City,JE-3AF1D134,38,2015-10-02,Local,-74.07764,US,America
+204,"97 Jones village
+Lynnestad
+EH0H 7WL, Kingston upon Hull",53.7446,,Kingston upon Hull,KI-967D1E81,20,2013-03-30,Local,-0.33525,GB,eeEurope
+205,"Dippelweg 175
+28510 Spremberg, Barmbek-Nord",53.6052,,Barmbek-Nord,BA-B0933185,85,2007-12-15,Super Store,10.03988,DE,Europe
+206,"5352 Maureen Turnpike Apt. 081
+Lake Kevin, WY 05079, Fayetteville",35.05266,,Fayetteville,FA-6A7ABBAD,131,2008/12/07,Super Store,-78.87836,US,America
+207,"Studio 89
+Rice freeway
+Taylorshire
+N22 1NT, Bushey",51.64316,,Bushey,BU-3020DF6C,36,2020-08-22,Local,-0.36053,GB,Europe
+208,"Mariola-Stey-Weg 67
+59162 Bad Kreuznach, Friedberg",48.35693,,Friedberg,FR-91D11D69,51,2007-12-21,Outlet,10.98461,DE,Europe
+209,"Flat 2
+Gibson stream
+Thorpeview
+AL14 1ZX, Strood",51.39323,,Strood,ST-32641EC1,33,1996-10-26,Local,0.47713,GB,Europe
+210,"Wanda-Etzold-Gasse 1
+80729 Finsterwalde, Schleswig",54.52156,,Schleswig,SC-ADA59883,32,2017-05-21,Local,9.5586,DE,Europe
+211,"Studio 52
+Brown place
+New Kimland
+WC2 0HD, Gainsborough",53.38333,,Gainsborough,GA-2252ED9A,31,2009-11-19,Local,-0.76667,GB,Europe
+212,"Studio 26e
+Miles port
+Vincentfurt
+G2 0PL, Westbury",51.26,,Westbury,WE-298C66F0,111,1998-02-27,Super Store,-2.1875,GB,Europe
+213,"303 Abdul cliffs
+Sandersmouth
+NR18 5HB, Poulton-le-Fylde",53.83333,,Poulton-le-Fylde,PO-3A1A12CD,58,2000-06-23,Outlet,-2.98333,GB,Europe
+214,"Flat 81
+Gardner mission
+North Leighton
+ZE25 5WP, Cowes",50.76306,,Cowes,CO-EAEDFFF3,30,2008-03-20,Local,-1.29772,GB,Europe
+215,"Tina-Döring-Gasse 68
+95518 Calw, Gauting",48.06919,,Gauting,GA-846D92B4,28,1995-04-22,Local,11.37703,DE,Europe
+216,"Flat 75b
+Robert courts
+Adamsstad
+PA4B 9HF, Westbury",51.26,,Westbury,WE-54DE559C,33,2016-10-31,Local,-2.1875,GB,Europe
+217,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+218,"Flat 08f
+Francis flat
+West Kathrynstad
+SE69 3RR, Penzance",50.11861,,Penzance,PE-60C328DB,20,2013-10-25,Local,-5.53715,GB,Europe
+219,"9 Walker skyway
+South Naomimouth
+W58 1FA, Blackpool",53.81667,,Blackpool,BL-8387506C,33,2021-05-19,Local,-3.05,GB,Europe
+220,"Strohplatz 83
+98919 Perleberg, Oberhausen",51.47805,,Oberhausen,OB-B57D2016,82,2014-05-21,Super Store,6.8625,DE,Europe
+221,"0885 Smith Summit
+South Heather, DC 76175, Redding",40.58654,,Redding,RE-4D07B5F2,33,2003-04-04,Local,-122.39168,US,America
+222,"Schleichallee 0
+69754 Naila, Hofheim am Taunus",50.09019,,Hofheim am Taunus,HO-85D2BA5B,82,2016-02-06,Super Store,8.4493,DE,Europe
+223,"Nelli-Täsche-Gasse 7
+02190 Dinslaken, Verl",51.88333,,Verl,VE-EE7A1F48,118,2010-05-21,Super Store,8.51667,DE,Europe
+224,"Flat 78
+Higgins ports
+Lloydfort
+LN0X 1AE, Rhosllanerchrugog",53.00974,,Rhosllanerchrugog,RH-AB6C3782,27,2015-02-19,Local,-3.05814,GB,Europe
+225,"68 Briggs cliff
+Scottton
+S05 6HX, Aberdeen",57.14369,,Aberdeen,AB-316DE4BA,37,1993-11-21,Local,-2.09814,GB,Europe
+226,"1 Charlene summit
+East Terence
+EH0 7FH, Lancing",50.82882,,Lancing,LA-F0652295,33,2018-02-13,Local,-0.32247,GB,Europe
+227,"5 Gough park
+Baldwinshire
+KA39 6EQ, East Dereham",52.68333,,East Dereham,EA-6B5D31D8,56,1994-09-16,Outlet,0.93333,GB,Europe
+228,"Studio 5
+Charlotte park
+Bethanyview
+L99 4EA, Belper",53.0233,,Belper,BE-2DE7E6FD,72,2013-11-19,Outlet,-1.48119,GB,Europe
+229,"van der Dussenallee 980
+73428 Karlsruhe, Hofheim am Taunus",50.09019,,Hofheim am Taunus,HO-978C59DC,87,2014-04-07,Outlet,8.4493,DE,Europe
+230,"833 Amanda well
+Elliotttown
+CM38 7DQ, Kingston upon Hull",53.7446,,Kingston upon Hull,KI-AF3A421C,32,2006-05-04,Local,-0.33525,GB,Europe
+231,RC99UKMZB2,2YBZ1440V6,OXVE5QR07O,6LVWPU1G64,Y8J0Z2W8O9,2429OB3LMM,0OLAK2I6NS,50IB01SFAZ,L13EQEQODP,HMHIFNLOBN,5586JCLARW
+232,"Flat 16
+Josephine streets
+Lesliebury
+SG38 6QB, Chapletown",53.46506,,Chapletown,CH-C9AB9518,40,2006-08-23,Local,-1.47217,GB,Europe
+233,"Studio 66
+Jill lodge
+Pottston
+HR8 4QD, Rutherglen",55.82885,,Rutherglen,RU-514020AC,80,2015-03-20,Super Store,-4.21376,GB,Europe
+234,"Ottomar-Mans-Gasse 67
+61565 Hofgeismar, Wittenau",52.59319,,Wittenau,WI-5CDC1053,101,2018-10-03,Super Store,13.32127,DE,Europe
+235,"23220 Christine Passage
+Lake Karen, ME 66805, Mira Mesa",32.9156,,Mira Mesa,MI-D57825AA,4,2000-02-12,Mall Kiosk,-117.14392,US,America
+236,"2 Keith course
+Walkerport
+HS3X 9BE, Winsford",53.19146,,Winsford,WI-293A03C1,70,2011-11-25,Outlet,-2.52398,GB,Europe
+237,"566 John gardens
+Port Glen
+WN31 5WB, Great Wyrley",52.66277,,Great Wyrley,GR-84BD26D4,131,2003-11-06,Super Store,-2.01111,GB,Europe
+238,"Flat 77
+Rita path
+Smithstad
+N59 7SX, Thetford",52.41667,,Thetford,TH-B6A0AB51,22,2021-08-05,Local,0.75,GB,Europe
+239,"Studio 40Z
+Graham stravenue
+Brownfort
+S7W 5YB, Surbiton",51.39148,,Surbiton,SU-203C8474,93,2007-09-05,Super Store,-0.29825,GB,Europe
+240,"Flat 65
+Gordon estates
+Longbury
+G4B 4XF, Exeter",50.7236,,Exeter,EX-A3F2DB7C,6,2014-07-28,Mall Kiosk,-3.52751,GB,Europe
+241,"Drubplatz 5/8
+30390 Hofgeismar, Albstadt",48.21644,,Albstadt,AL-9E1A5529,39,2022-07-29,Local,9.02596,DE,Europe
+242,"Flat 84d
+Carol points
+Paigeland
+G3 0PD, Clacton-on-Sea",51.78967,,Clacton-on-Sea,CL-DA786EF6,22,October 2006 04,Local,1.15597,GB,Europe
+243,"Dörschnerweg 8
+53663 Saulgau, Aschaffenburg",49.97704,,Aschaffenburg,AS-D26C759B,20,2004-12-07,Local,9.15214,DE,Europe
+244,"1135 Savannah Summit
+Pierceshire, CO 66052, Fairview Heights",38.58894,,Fairview Heights,FA-0A1B14FB,73,1994-10-17,Outlet,-89.99038,US,America
+245,"5 Reynolds run
+Jenniferfort
+E8G 5YX, High Wycombe",51.62907,,High Wycombe,HI-FD1137FA,7,1997-03-15,Mall Kiosk,-0.74934,GB,Europe
+246,"5 Gardner mission
+North Mohammedfort
+G4 8XS, Clacton-on-Sea",51.78967,,Clacton-on-Sea,CL-7BF16887,23,2018-03-09,Local,1.15597,GB,Europe
+247,"Studio 85
+Evans fields
+East Gavinport
+DT9P 1AP, Penzance",50.11861,,Penzance,PE-360EA944,37,1995-06-06,Local,-5.53715,GB,eeEurope
+248,"7430 Howe Extensions Suite 299
+Kellyside, WA 99104, Sicklerville",39.71734,,Sicklerville,SI-C489938D,80R,1994-02-28,Outlet,-74.96933,US,America
+249,"Killerweg 58
+68233 Kronach, Landshut",48.52961,,Landshut,LA-7A9AA65C,129,1994-12-02,Super Store,12.16179,DE,Europe
+250,"491 Joel inlet
+Port Justinside
+M3 3JS, Aberdeen",57.14369,,Aberdeen,AB-4ABD6D51,6,1994-08-19,Mall Kiosk,-2.09814,GB,Europe
+251,"Knappegasse 4/9
+24537 Düren, Radevormwald",51.20219,,Radevormwald,RA-5F41ED85,38,2017-12-27,Local,7.36027,DE,Europe
+252,"Studio 3
+Gregory cove
+North Geoffreyberg
+E9G 4XP, Belper",53.0233,,Belper,BE-7C142381,7,2008-11-15,Mall Kiosk,-1.48119,GB,eeEurope
+253,"5 Gill square
+Blakeborough
+PR9W 6XB, Brierley Hill",52.48173,,Brierley Hill,BR-FB62A5BA,4,2004-12-30,Mall Kiosk,-2.12139,GB,Europe
+254,"Faustgasse 1/9
+35075 Lichtenfels, Oschatz",51.30001,,Oschatz,OS-EE0CC48A,28,2015-05-11,Local,13.10984,DE,Europe
+255,"98 Barnett alley
+Chambersland
+N96 1QA, Viewpark",55.82737,,Viewpark,VI-682A89FF,23,1998-12-18,Local,-4.0573,GB,eeEurope
+256,"Pölitzring 379
+05718 Zossen, Gauting",48.06919,,Gauting,GA-5957F561,6,2019-09-13,Mall Kiosk,11.37703,DE,eeEurope
+257,"47 Gavin summit
+East Lucybury
+SK9 4AA, Poulton-le-Fylde",53.83333,,Poulton-le-Fylde,PO-4AF8FC4D,38,1999-03-30,Local,-2.98333,GB,Europe
+258,"61 Taylor crest
+Longport
+B6 6WR, Selby",53.78333,,Selby,SE-68A67454,30,2004-08-13,Local,-1.06667,GB,Europe
+259,"Hans-Bernd-Atzler-Ring 1/7
+78760 Zschopau, Radevormwald",51.20219,,Radevormwald,RA-412FE889,72,2009-07-22,Super Store,7.36027,DE,Europe
+260,"Marita-Ziegert-Allee 511
+20274 Zerbst, Kirchlengern",52.2,,Kirchlengern,KI-81D6FEBD,33,2001-01-12,Local,8.63333,DE,Europe
+261,"Studio 23
+Matthews village
+East Elliott
+LU6A 5BE, Westbury",51.26,,Westbury,WE-41EFA2D6,60,2019-04-27,Outlet,-2.1875,GB,Europe
+262,"Studio 68
+Ward knoll
+Stephensonside
+SL42 7JL, Leyland",53.69786,,Leyland,LE-1438EF01,23,1995-01-20,Local,-2.68758,GB,Europe
+263,"Maria-Theresia-Johann-Allee 52
+05110 Scheinfeld, Siegburg",50.80019,,Siegburg,SI-3E5F4AD9,20,2010-10-27,Local,7.20769,DE,Europe
+264,"Rosina-Henk-Gasse 8/6
+59445 Aschaffenburg, Pfullingen",48.46458,,Pfullingen,PF-F54C3265,37,2006-07-08,Local,9.22796,DE,Europe
+265,"7314 Cobb Course Apt. 178
+Garrettmouth, IN 57585, Port Richmond",40.63316,,Port Richmond,PO-D4D326B4,23,2005-06-07,Local,-74.13653,US,America
+266,"Studio 53
+Miles fort
+Jonesland
+B2J 8HG, Selby",53.78333,,Selby,SE-09EAF854,28,2013-11-04,Local,-1.06667,GB,Europe
+267,"18980 John Points Apt. 129
+Robinsonshire, PW 88197, Belle Glade",26.68451,,Belle Glade,BE-DAD46DCD,32,1995-01-21,Local,-80.66756,US,America
+268,"3 Graham manors
+Tracystad
+RG1 5XZ, Belper",53.0233,,Belper,BE-BC3E4F9A,111,2002-11-07,Super Store,-1.48119,GB,Europe
+269,"Werneckeweg 9/6
+93470 Bad Mergentheim, Weimar",50.9803,,Weimar,WE-55D0E7FF,34,1998-05-02,Local,11.32903,DE,Europe
+270,"Studio 1
+Kyle mission
+New Glentown
+SL43 9YP, Strood",51.39323,,Strood,ST-8D1A43F1,34,2018-04-26,Local,0.47713,GB,Europe
+271,"Claire-Heidrich-Weg 2/8
+59107 Sankt Goar, Verl",51.88333,,Verl,VE-1050754E,24,2007-09-03,Local,8.51667,DE,Europe
+272,"Flat 3
+Yvonne views
+Matthewsstad
+PL50 0QL, Chapletown",53.46506,,Chapletown,CH-86DFF57D,27,1997-10-26,Local,-1.47217,GB,eeEurope
+273,"970 Myers heights
+Lorrainemouth
+LS0B 5DB, Great Wyrley",52.66277,,Great Wyrley,GR-6D292223,22,2018-02-26,Local,-2.01111,GB,Europe
+274,"41 Carr ranch
+Kieranfurt
+G1 7DX, High Wycombe",51.62907,,High Wycombe,HI-D59BBEEC,114,2017-06-19,Super Store,-0.74934,GB,Europe
+275,"Flat 83t
+Thomas road
+South Adam
+TW08 6QY, Chapletown",53.46506,,Chapletown,CH-8A74708A,52,1995-04-29,Outlet,-1.47217,GB,Europe
+276,"265 Talbot fork
+Rogersmouth
+E1 7EP, Great Wyrley",52.66277,,Great Wyrley,GR-30543E4C,137,1999-11-24,Super Store,-2.01111,GB,Europe
+277,"70 Dale lakes
+East Adam
+E3 9QS, Great Wyrley",52.66277,,Great Wyrley,GR-664E0CB3,38,2011-08-15,Local,-2.01111,GB,Europe
+278,"Otto-Tlustek-Ring 23
+53302 Grevenbroich, Karben",50.23019,,Karben,KA-249967D9,31,1999-01-12,Local,8.77155,DE,Europe
+279,"2 Francis mission
+Shaunton
+G3 9WF, Exeter",50.7236,,Exeter,EX-B1AACC7D,37,2005-04-07,Local,-3.52751,GB,Europe
+280,"332 Eleanor forest
+Rachelville
+B3J 6YX, Blackpool",53.81667,,Blackpool,BL-04FD6EF3,28,2002-11-22,Local,-3.05,GB,Europe
+281,"Flat 44
+Gareth roads
+Lake Jeanborough
+CW7V 4GP, Surbiton",51.39148,,Surbiton,SU-B415327A,23,2011-02-19,Local,-0.29825,GB,Europe
+282,"Flat 26c
+Gill dam
+North Bryanport
+M1 2NX, Walton-on-the-Naze",51.84819,,Walton-on-the-Naze,WA-0A35C594,132,2006-06-15,Super Store,1.26738,GB,Europe
+283,"2 Matthews street
+Lynchborough
+FK37 3TX, Devizes",51.35084,,Devizes,DE-504A9BFE,38,2013-05-04,Local,-1.99421,GB,Europe
+284,"275 Williams garden
+Kingland
+W8 1NZ, Arbroath",56.56317,,Arbroath,AR-CB0D95D8,20,2003-01-06,Local,-2.58736,GB,Europe
+285,"Reinhard-Weller-Allee 7
+09791 Uelzen, Reutlingen",48.49144,,Reutlingen,RE-FAF57EF7,4,2013-07-13,Mall Kiosk,9.20427,DE,eeEurope
+286,"2 Lewis burg
+Josephfort
+W14 4SB, Aberdeen",57.14369,,Aberdeen,AB-337AEBA7,63,1998-07-18,Outlet,-2.09814,GB,Europe
+287,"2 Ian gateway
+Lynneside
+NP3 4SR, Penzance",50.11861,,Penzance,PE-8BF5FE22,70,2008-02-14,Outlet,-5.53715,GB,Europe
+288,"653 Smith radial
+Lydiaport
+E8E 8SU, Bushey",51.64316,,Bushey,BU-0FB4CF87,30,2003-04-23,Local,-0.36053,GB,Europe
+289,"Faustring 1
+52133 Duderstadt, Memmingen",47.98372,,Memmingen,ME-6529390A,78,2005-06-13,Outlet,10.18527,DE,Europe
+290,"Flat 07
+Dawson mall
+Edwardston
+LE11 0TG, Newbury",51.40148,,Newbury,NE-2B35DCBD,23,2011-08-20,Local,-1.32471,GB,Europe
+291,"Buchholzallee 372
+93158 Bremen, Burscheid",51.08468,,Burscheid,BU-90D457E0,40,2004-11-17,Local,7.11393,DE,Europe
+292,"Löwerallee 49
+00561 Miltenberg, Landshut",48.52961,,Landshut,LA-55069B69,6,2001 May 04,Mall Kiosk,12.16179,DE,Europe
+293,"Flat 0
+Billy hill
+Hughstad
+G3B 0EL, Chapletown",53.46506,,Chapletown,CH-DEF208AA,8,2022-02-25,Mall Kiosk,-1.47217,GB,Europe
+294,"98501 Emily Field Suite 577
+West Michael, IN 29247, Brunswick",43.91452,,Brunswick,BR-CACF7508,7,2000-02-15,Mall Kiosk,-69.96533,US,America
+295,"Flat 96s
+Michelle courts
+South Geraldside
+EX08 4PA, Great Wyrley",52.66277,,Great Wyrley,GR-911A7DFC,66,2010-02-02,Outlet,-2.01111,GB,Europe
+296,"29 Craig mountains
+New Kellyville
+M3 1YE, Blackpool",53.81667,,Blackpool,BL-9A86B74D,24,1993-01-26,Local,-3.05,GB,Europe
+297,"Flat 07
+Owen gardens
+New Terry
+L8U 0DY, Barnet",51.65,,Barnet,BA-99F54BD0,113,2016-05-16,Super Store,-0.2,GB,Europe
+298,"Reingard-Weinhage-Weg 9/9
+49079 Zerbst, Trossingen",48.07667,,Trossingen,TR-658557DD,20,2016-04-29,Local,8.64409,DE,eeEurope
+299,"05 Stone trail
+Lake Alexandratown
+W3 1YU, Blackpool",53.81667,,Blackpool,BL-D6CF153F,4,2004-03-15,Mall Kiosk,-3.05,GB,Europe
+300,"Flat 12
+Harriet circle
+Sandraland
+UB0V 3QF, Arbroath",56.56317,,Arbroath,AR-2284FD32,4,2018-11-29,Mall Kiosk,-2.58736,GB,Europe
+301,"Christine-Winkler-Straße 5
+08309 Wurzen, Gronau",52.21099,,Gronau,GR-63F021A1,6,2020-02-22,Mall Kiosk,7.02238,DE,Europe
+302,"Flat 53
+Liam vista
+Alicehaven
+E6E 7TE, East Dereham",52.68333,,East Dereham,EA-EB4F2E1B,68,2000-09-20,Outlet,0.93333,GB,Europe
+303,"Döringallee 7
+21119 Sankt Goarshausen, Gifhorn",52.47774,,Gifhorn,GI-718674C0,78,2005-01-10,Super Store,10.5511,DE,Europe
+304,"Kadestr. 0
+65793 Hildesheim, Charlottenburg-Nord",52.53048,,Charlottenburg-Nord,CH-7638016B,31,2000-06-27,Local,13.29371,DE,Europe
+305,"8 Baker orchard
+Joycestad
+S7 3XE, Gainsborough",53.38333,,Gainsborough,GA-D570038A,137,1996-05-18,Super Store,-0.76667,GB,Europe
+306,"Mercedes-Benthin-Ring 2/8
+93429 Saarlouis, Hofheim am Taunus",50.09019,,Hofheim am Taunus,HO-16A376B0,28,2022-06-18,Local,8.4493,DE,Europe
+307,"5 Cole rapid
+West Robert
+SN63 0XR, Aberdeen",57.14369,,Aberdeen,AB-30E0C17F,37,2003-05-17,Local,-2.09814,GB,Europe
+308,"Peukertring 850
+19830 Bad Brückenau, Nidderau",50.23805,,Nidderau,NI-AB0FECD7,90,2022-10-12,Outlet,8.86704,DE,Europe
+309,"Flat 1
+Brenda fields
+New Brenda
+SA7N 1WA, Selby",53.78333,,Selby,SE-C44E6951,40,1993-04-19,Outlet,-1.06667,GB,Europe
+310,"Studio 24I
+Nathan lock
+Adamberg
+BR0M 3YZ, Cowes",50.76306,,Cowes,CO-308FF73B,39,2019-01-06,Local,-1.29772,GB,Europe
+311,"4 Wright ways
+South Timothychester
+FK4B 2WB, Exeter",50.7236,,Exeter,EX-B4EE25D8,38,2007-05-27,Local,-3.52751,GB,Europe
+312,"Studio 97
+Morris wall
+West Karl
+SL9 9DZ, Selby",53.78333,,Selby,SE-E21DDC72,35,2017-09-04,Local,-1.06667,GB,Europe
+313,"349 Megan extensions
+West Martin
+PH39 7DR, Thetford",52.41667,,Thetford,TH-142AE777,94,2007-05-05,Super Store,0.75,GB,Europe
+314,"10212 Victoria Ports
+Port Jillview, MN 30315, Carlsbad",32.42067,,Carlsbad,CA-70469742,5,2012-09-22,Mall Kiosk,-104.22884,US,America
+315,"Flat 09
+Ford cliff
+Jeffreyville
+W6E 2FW, Newbury",51.40148,,Newbury,NE-6046DE65,29,1996-06-01,Local,-1.32471,GB,Europe
+316,"118 Logan Port Suite 682
+New Jacobton, SC 81887, Lutz",28.15112,,Lutz,LU-439557A9,4,2012-08-18,Mall Kiosk,-82.46148,US,America
+317,"317 Douglas springs
+Kayleighberg
+B9C 7QG, Surbiton",51.39148,,Surbiton,SU-163D2755,77,2012-10-07,Outlet,-0.29825,GB,Europe
+318,"Studio 4
+Fuller crossing
+West Guy
+SM9 8AQ, Viewpark",55.82737,,Viewpark,VI-8EBC5471,27,2004-01-23,Local,-4.0573,GB,Europe
+319,"268 Smith walks
+North Stuartborough
+W42 8LL, Bushey",51.64316,,Bushey,BU-834779E4,93,2017-11-17,Super Store,-0.36053,GB,Europe
+320,"32961 Daniel Bridge
+West Malikfurt, ME 07252, Sterling",39.00622,,Sterling,ST-6590521C,32,1996-02-04,Local,-77.4286,US,America
+321,"Fabian-Kruschwitz-Ring 1
+42324 Wiedenbrück, Hofheim am Taunus",50.09019,,Hofheim am Taunus,HO-CE40B554,134,2019-12-18,Super Store,8.4493,DE,Europe
+322,"167 Damien valley
+Port Mohamedborough
+M10 4LS, Lower Earley",51.42708,,Lower Earley,LO-8E1CA9E3,96,1996-09-18,Super Store,-0.91979,GB,Europe
+323,"4 White greens
+Stephenmouth
+TS3 9AX, Surbiton",51.39148,,Surbiton,SU-ABF4F9A1,7,2001-05-18,Mall Kiosk,-0.29825,GB,Europe
+324,"2 Kieran alley
+South Leanneshire
+EH4 8AQ, Cowes",50.76306,,Cowes,CO-9A576872,84,2015-03-06,Outlet,-1.29772,GB,Europe
+325,"Hertrampfallee 45
+17758 Strasburg, Albstadt",48.21644,,Albstadt,AL-EE8984F0,5,2003-10-16,Mall Kiosk,9.02596,DE,Europe
+326,"Diethard-Bien-Ring 95
+87473 Neunburg vorm Wald, Albstadt",48.21644,,Albstadt,AL-FB5FAE9B,22,2005-03-26,Local,9.02596,DE,Europe
+327,"Flat 38E
+Roy squares
+Mahmoodton
+RH7P 3AS, East Dereham",52.68333,,East Dereham,EA-EC2DAADE,36,2010-11-15,Local,0.93333,GB,Europe
+328,"Boucseinweg 1/9
+96416 Worbis, Stuttgart",48.78232,,Stuttgart,ST-D14ED89D,59,1998-09-29,Outlet,9.17702,DE,Europe
+329,"Flat 3
+Carole walks
+Davisborough
+S2 5EE, Lower Earley",51.42708,,Lower Earley,LO-C4AB23C1,22,2015-08-31,Local,-0.91979,GB,Europe
+330,"Schleichstr. 883
+92656 Bruchsal, Oberhausen",51.47805,,Oberhausen,OB-4B85CD4E,108,1996-10-22,Super Store,6.8625,DE,Europe
+331,"Flat 9
+Marc islands
+Joanfort
+LN39 1RY, Bushey",51.64316,,Bushey,BU-79F72A64,4,2011-09-24,Mall Kiosk,-0.36053,GB,Europe
+332,"Marit-Zirme-Platz 8
+08920 Berchtesgaden, Eppingen",49.13645,,Eppingen,EP-E66BE479,6,1996-10-15,Mall Kiosk,8.91229,DE,Europe
+333,X349GIDWKU,O7NF1FZ74Y,VKA5I8H32X,RX9TCP2RGB,ISEE8A57FE,74BY7HSB6P,A3PMVM800J,0RSNUU3DF5,J3BPB68Z1J,F3AO8V2LHU,GFJQ2AAEQ8
+334,"9 Jones divide
+Whitechester
+LU9E 4BL, Walton-on-the-Naze",51.84819,,Walton-on-the-Naze,WA-58021322,80,2011-02-08,Super Store,1.26738,GB,Europe
+335,"Beckmannring 978
+52046 Bad Freienwalde, Korschenbroich",51.19139,,Korschenbroich,KO-7E39C57F,33,1995-02-26,Local,6.51352,DE,Europe
+336,"588 Natalie plaza
+Annefurt
+N94 8GD, High Wycombe",51.62907,,High Wycombe,HI-AED3C6CD,29,2012-06-21,Local,-0.74934,GB,eeEurope
+337,"6 John port
+North Amanda
+G6 2EU, Aberdeen",57.14369,,Aberdeen,AB-D665986A,32,2002-07-21,Local,-2.09814,GB,Europe
+338,"Kata-Seifert-Gasse 241
+04496 Wetzlar, Bretten",49.03685,,Bretten,BR-B7C294A7,77,2018-02-08,Outlet,8.70745,DE,Europe
+339,"Flat 5
+Ward gardens
+New Timothy
+SO9X 6NY, Lymington",50.75767,,Lymington,LY-120579E6,34,1998-05-05,Local,-1.5443,GB,eeEurope
+340,"148 Samuel course
+Nicolaside
+GY3E 5SD, Great Wyrley",52.66277,,Great Wyrley,GR-250FBD0C,27,1994 November 24,Local,-2.01111,GB,Europe
+341,"Studio 8
+Lydia groves
+North Hilarymouth
+IV4 6EJ, Southsea",50.79205,,Southsea,SO-B5B9CB3B,A97,2018-05-08,Super Store,-1.08593,GB,Europe
+342,"Mareile-Geißler-Straße 54
+41907 Lobenstein, Landshut",48.52961,,Landshut,LA-6D1FE061,89,2017-10-24,Outlet,12.16179,DE,Europe
+343,"Bruderstr. 1/5
+24745 Mayen, Bretten",49.03685,,Bretten,BR-09D8DE69,5,1999-01-02,Mall Kiosk,8.70745,DE,Europe
+344,"Flat 06e
+Herbert fall
+Lake Frank
+FK92 1JZ, Westbury",51.26,,Westbury,WE-C5C34475,134,1994-01-29,Super Store,-2.1875,GB,eeEurope
+345,"22 Taylor island
+Lake Danielfort
+B6 8NH, Inverness",57.47908,,Inverness,IN-827175EE,36,2010-06-06,Local,-4.22398,GB,Europe
+346,"Heinz-Dieter-Stadelmann-Ring 55
+11784 Miesbach, Verl",51.88333,,Verl,VE-38B76FFE,28,2006-07-18,Local,8.51667,DE,Europe
+347,"Mirco-Dörschner-Straße 4/3
+16157 Jülich, Oschatz",51.30001,,Oschatz,OS-4BF93680,34,2020-11-13,Local,13.10984,DE,Europe
+348,"auch Schlauchinstraße 287
+85621 Ochsenfurt, Weimar",50.9803,,Weimar,WE-69BFEA46,53,2009-07-26,Outlet,11.32903,DE,Europe
+349,"Ilonka-Rust-Gasse 700
+44228 Burgdorf, Halstenbek",53.63333,,Halstenbek,HA-FC4E6AFF,32,2017-06-01,Local,9.85,DE,Europe
+350,"7 Tracy bridge
+Dohertyport
+E8H 1UF, Exeter",50.7236,,Exeter,EX-A01E0020,39,2004-01-23,Local,-3.52751,GB,Europe
+351,"06969 Dalton Rapid Apt. 131
+Port James, DE 55905, Hutchinson",38.06084,,Hutchinson,HU-57B095A2,40,1998-01-22,Local,-97.92977,US,America
+352,"Almut-Förster-Ring 366
+87661 Spremberg, Charlottenburg-Nord",52.53048,,Charlottenburg-Nord,CH-01DEFD68,36,1998-04-01,Local,13.29371,DE,Europe
+353,"4 Emma trail
+Ellisborough
+E0 7DY, Rutherglen",55.82885,,Rutherglen,RU-9D16C525,4,1998-09-11,Mall Kiosk,-4.21376,GB,Europe
+354,"7298 Todd Mission Suite 390
+Sullivanside, PW 47041, Scarsdale",41.0051,,Scarsdale,SC-FFDD5A57,7,1999-09-18,Mall Kiosk,-73.78458,US,America
+355,"Studio 85
+Gardner port
+Charltonborough
+S9B 4HT, Kingston upon Hull",53.7446,,Kingston upon Hull,KI-DD9663C2,28,1997-03-25,Local,-0.33525,GB,Europe
+356,"792 Allen locks
+Hughesborough
+W8D 0NQ, Exeter",50.7236,,Exeter,EX-B3F5CFB1,20,1996-07-09,Local,-3.52751,GB,Europe
+357,"789 Donna Skyway Suite 416
+East Margaretland, AR 43995, Iron River",46.09273,,Iron River,IR-C8DAAB31,28,2002-05-14,Local,-88.64235,US,America
+358,"Gerta-Häring-Straße 8
+98714 Donaueschingen, Wesseling",50.82709,,Wesseling,WE-A6C131B0,113,1997-09-15,Super Store,6.9747,DE,Europe
+359,"Gorlitzallee 04
+16084 Stadtsteinach, Oberhausen",51.47805,,Oberhausen,OB-FDC2CF69,36,2015-07-05,Local,6.8625,DE,Europe
+360,"Hillerring 299
+61655 Merseburg, Bad Segeberg",53.94313,,Bad Segeberg,BA-25629F8E,24,2021-08-11,Local,10.30215,DE,Europe
+361,"45 Cameron field
+Rhysport
+G24 5RX, High Wycombe",51.62907,,High Wycombe,HI-7B43DCA9,35,2009-09-20,Local,-0.74934,GB,Europe
+362,"Egbert-Heser-Straße 066
+16185 Wurzen, Hechingen",48.35149,,Hechingen,HE-84E62AB9,30,2001-04-20,Local,8.96317,DE,Europe
+363,"Studio 9
+Rachael mills
+Lake Guy
+ML6 0YG, Rutherglen",55.82885,,Rutherglen,RU-DA6DCDA7,38,2000-12-28,Local,-4.21376,GB,Europe
+364,"212 Nicola islands
+East Ricky
+JE2H 2AG, Inverness",57.47908,,Inverness,IN-E47115F0,32,1995-08-26,Local,-4.22398,GB,Europe
+365,"Gerti-Gumprich-Gasse 9/3
+69138 Pfaffenhofen an der Ilm, Bad Segeberg",53.94313,,Bad Segeberg,BA-91C512D2,26,2007-10-04,Local,10.30215,DE,eeEurope
+366,"937 Sharon Lane Suite 420
+South Jonfort, NM 79234, Jackson",35.61452,,Jackson,JA-49A2D7F5,40,1994-12-04,Local,-88.81395,US,America
+367,"76 Glen street
+Port Declan
+DH57 5XF, Inverness",57.47908,,Inverness,IN-C4060B7D,25,1999-05-16,Local,-4.22398,GB,Europe
+368,"1 Moore shore
+Smithmouth
+BT6 6LR, Chapletown",53.46506,,Chapletown,CH-6ADEBD99,7,2005-11-08,Mall Kiosk,-1.47217,GB,Europe
+369,"0 Marian circles
+Port Kayleigh
+PR5 6LW, Bushey",51.64316,,Bushey,BU-B5B6F452,25,February 2009 28,Local,-0.36053,GB,Europe
+370,"Studio 88
+Alice crescent
+Clareview
+E3C 1BB, Selby",53.78333,,Selby,SE-531CB6EE,36,1994-10-11,Local,-1.06667,GB,Europe
+371,"92 Carole drives
+East Hollie
+L6F 3AJ, Surbiton",51.39148,,Surbiton,SU-EFC31DF9,96,2017-06-12,Super Store,-0.29825,GB,Europe
+372,"Studio 23
+Bernard villages
+Dannychester
+N0 0WZ, Strood",51.39323,,Strood,ST-76D54DCB,59,1998-09-29,Outlet,0.47713,GB,Europe
+373,"Stefano-Drewes-Platz 5/8
+72384 Karlsruhe, Hechingen",48.35149,,Hechingen,HE-A49D28DF,24,2001-07-27,Local,8.96317,DE,Europe
+374,"50 Palmer lakes
+West Jacquelinemouth
+S5J 7UG, Lancing",50.82882,,Lancing,LA-0E85631B,29,2010-07-26,Local,-0.32247,GB,Europe
+375,"Salzstraße 1/9
+74209 Bad Freienwalde, Charlottenburg-Nord",52.53048,,Charlottenburg-Nord,CH-99475026,3n9,1995-03-05,Local,13.29371,DE,Europe
+376,"Ewa-Mude-Weg 8
+93170 Neustrelitz, Pfullingen",48.46458,,Pfullingen,PF-4FB7B30C,21,2001-05-10,Local,9.22796,DE,Europe
+377,"Danny-Schüler-Platz 8/0
+55598 Bayreuth, Albstadt",48.21644,,Albstadt,AL-34ABF27F,37,1997-01-30,Local,9.02596,DE,Europe
+378,"Flat 59
+Donna wells
+Walshton
+DD4P 8WL, Lower Earley",51.42708,,Lower Earley,LO-74DBE049,26,2019-07-19,Local,-0.91979,GB,Europe
+379,"71 James row
+Lake Angela
+EC60 5TP, Lower Earley",51.42708,,Lower Earley,LO-EC0C9189,33,2018-10-21,Local,-0.91979,GB,Europe
+380,"81 Kenneth spur
+Lake Jeremy
+PO80 5NA, Belper",53.0233,,Belper,BE-C5C7E600,39,1993-08-16,Local,-1.48119,GB,Europe
+381,ZBGB54ID4H,SKO4NMRNNF,LACCWDI0SB,CQMHKI78BX,T0R2CQBDUS,GT1FO6YGD4,GMMB02LA9V,B4KVQB3P5Y,AJHOMDOHZ4,OH20I92LX3,SLQBD982C0
+382,"Flat 2
+Hill trafficway
+Annefurt
+BD0X 4SD, Penzance",50.11861,,Penzance,PE-F9CF2B74,7,2006-06-18,Mall Kiosk,-5.53715,GB,Europe
+383,"Handegasse 60
+21291 Soltau, Aschaffenburg",49.97704,,Aschaffenburg,AS-373D10B2,51,1997-09-17,Outlet,9.15214,DE,Europe
+384,"23 Spencer creek
+Robinsonborough
+EH6 4UE, Rhosllanerchrugog",53.00974,,Rhosllanerchrugog,RH-450F1A1B,23,2004-01-23,Local,-3.05814,GB,Europe
+385,"Dina-Beier-Allee 6/2
+47004 Uffenheim, Gronau",52.21099,,Gronau,GR-61A03D84,25,1994-10-19,Local,7.02238,DE,Europe
+386,"9 Richard centers
+Port Lorrainestad
+TF7 0XN, Aberdeen",57.14369,,Aberdeen,AB-D04AA29C,68,2002-07-23,Outlet,-2.09814,GB,Europe
+387,"Dorothe-Wernecke-Allee 0/5
+27291 Greifswald, Weimar",50.9803,,Weimar,WE-0E145AF9,29,2019-01-04,Local,11.32903,DE,Europe
+388,"7646 Smith Key
+Murrayfurt, CT 96012, Bridgeport",41.16704,,Bridgeport,BR-0DCD7EE0,28,2006-01-20,Local,-73.20483,US,America
+389,"Studio 1
+Walsh gardens
+West Stanley
+M16 6YB, Thetford",52.41667,,Thetford,TH-B8F42840,70,2018-03-30,Super Store,0.75,GB,Europe
+390,"Studio 81
+Bentley villages
+Valeriechester
+M2 7RU, Great Wyrley",52.66277,,Great Wyrley,GR-16C93F4D,29,2005-03-13,Local,-2.01111,GB,Europe
+391,"6 Christine green
+Seanfort
+MK1 5UF, Blackpool",53.81667,,Blackpool,BL-190ABD7D,30,2022-04-05,Local,-3.05,GB,Europe
+392,"Hans-Martin-Köster-Straße 2/2
+19032 Seelow, Rudolstadt",50.72043,,Rudolstadt,RU-798BB83A,40,1996-05-30,Local,11.34046,DE,Europe
+393,"Studio 25
+Gerald square
+Lewisview
+SL3 9FD, Hartley",51.38673,,Hartley,HA-10EEDC1D,31,2004-02-13,Local,0.30367,GB,Europe
+394,"Studio 28Q
+Elliott plains
+North Hollyfurt
+CT50 1XR, Aberdeen",57.14369,,Aberdeen,AB-FCFAB1A9,106,March 2015 02,Super Store,-2.09814,GB,Europe
+395,"Peter-Röhricht-Straße 11
+62729 Ingolstadt, Hermsdorf",52.61131,,Hermsdorf,HE-8818F573,7,2005-07-20,Mall Kiosk,13.31783,DE,Europe
+396,"885 Smith skyway
+Port Paigestad
+BB2 6ZP, Inverness",57.47908,,Inverness,IN-CC1993CF,33,1993-08-03,Local,-4.22398,GB,Europe
+397,"6 Arnold course
+West Mitchell
+N74 1QS, Lymington",50.75767,,Lymington,LY-D37CAF45,20,2021-06-15,Local,-1.5443,GB,Europe
+398,"Ullmannring 4/9
+61484 Neustadtner Waldnaab, Reutlingen",48.49144,,Reutlingen,RE-75445D60,31,2013-05-08,Local,9.20427,DE,Europe
+399,"Flat 2
+Anna union
+Brownview
+N5S 6WR, Cowes",50.76306,,Cowes,CO-3971C69C,33,2004-10-11,Local,-1.29772,GB,Europe
+400,"Thanelweg 0/3
+77499 Wolfenbüttel, Neuburg an der Donau",48.73218,,Neuburg an der Donau,NE-D1A20330,5,2017-01-10,Mall Kiosk,11.18709,DE,Europe
+401,"Flat 7
+Diana prairie
+Ashleighville
+SN2 5SE, Lancing",50.82882,,Lancing,LA-A12C3D8F,38,2003-12-11,Local,-0.32247,GB,Europe
+402,"Putzplatz 722
+89252 Roth, Bad Honnef",50.64336,,Bad Honnef,BA-C0C7FDBE,28,2012-03-06,Local,7.2278,DE,Europe
+403,"Krauseweg 835
+71678 Perleberg, Losheim",49.5099,,Losheim,LO-F33AC948,31,2003-11-05,Local,6.74549,DE,Europe
+404,"90 Burton path
+South Clivemouth
+N3 1SB, Poulton-le-Fylde",53.83333,,Poulton-le-Fylde,PO-E636D18D,73,2010-10-18,Super Store,-2.98333,GB,Europe
+405,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+406,"2 Curtis fork
+Mariaburgh
+W7U 6DS, Leyland",53.69786,,Leyland,LE-1E8CCAFA,35,2014-05-21,Local,-2.68758,GB,Europe
+407,"89998 Thomas Cove
+Benjaminview, GA 10236, Scottsdale",33.50921,,Scottsdale,SC-4AE031F4,37,2017-10-26,Local,-111.89903,US,eeAmerica
+408,"Flat 98
+Page estates
+North Ann
+YO6 5NS, Lower Earley",51.42708,,Lower Earley,LO-ED733BA2,48,1996-12-11,Outlet,-0.91979,GB,Europe
+409,"Ortwin-Graf-Allee 755
+18785 Schwabmünchen, Friedberg",48.35693,,Friedberg,FR-A86E698A,21,2016-03-16,Local,10.98461,DE,Europe
+410,"Studio 38
+Georgia alley
+Lake Brendaburgh
+S0 9YS, Kingston upon Hull",53.7446,,Kingston upon Hull,KI-107167CD,119,2002-11-18,Super Store,-0.33525,GB,Europe
+411,"Flat 61o
+Melanie tunnel
+Howellsside
+M8W 3EJ, Belper",53.0233,,Belper,BE-7D0EF647,32,1993-06-29,Local,-1.48119,GB,Europe
+412,"31 Freeman circle
+Lake Lee
+B3 6JW, Penzance",50.11861,,Penzance,PE-086FA5EE,32,2018-04-10,Local,-5.53715,GB,Europe
+413,"Studio 4
+Sheppard forges
+Lake Lyndaberg
+L9 0SQ, Penzance",50.11861,,Penzance,PE-78E2B585,5,2003-08-05,Mall Kiosk,-5.53715,GB,Europe
+414,XTUAV57DP4,ID819KG3X5,A3O5CBWAMD,RY6K0AUE7F,TUOKF5HAAQ,FRTGHAA34B,13PIY8GD1H,X0FE7E2EOG,AE7EEW4HSS,OYVW925ZL8,XQ953VS0FG
+415,"Flat 82Z
+Tina vista
+New Nicholas
+IP2 5LW, Arbroath",56.56317,,Arbroath,AR-EE57502B,25,2011-12-12,Local,-2.58736,GB,Europe
+416,"3 James ferry
+South Terryshire
+N80 4HX, Exeter",50.7236,,Exeter,EX-FA379F57,129,1996-12-01,Super Store,-3.52751,GB,Europe
+417,"Sabine-Plath-Platz 1
+46885 Auerbach, Gronau",52.21099,,Gronau,GR-9049A708,124,2014-01-13,Super Store,7.02238,DE,eeEurope
+418,"Flat 10r
+Elaine rapids
+Stuartmouth
+TQ4P 6TA, Walton-on-the-Naze",51.84819,,Walton-on-the-Naze,WA-ED4B495E,21,2001-09-05,Local,1.26738,GB,Europe
+419,"18134 Caleb Pine
+New Michaelbury, ME 45223, Troutdale",45.53929,,Troutdale,TR-8CD56339,133,2004-02-09,Super Store,-122.38731,US,America
+420,"5937 Jody Station Suite 068
+Nathanview, MN 63911, Columbia Heights",45.0408,,Columbia Heights,CO-D819CC5E,38,2010-02-06,Local,-93.263,US,America
+421,"Flat 30
+Abigail isle
+Patelville
+L50 0QG, Exeter",50.7236,,Exeter,EX-82831D93,107,2017-09-10,Super Store,-3.52751,GB,Europe
+422,"Studio 84N
+Phillips squares
+South Andrea
+E56 5FU, Westbury",51.26,,Westbury,WE-FF0F6BA4,20,2010-04-06,Local,-2.1875,GB,Europe
+423,"Sergei-Bien-Gasse 92
+38896 Sternberg, Eppingen",49.13645,,Eppingen,EP-6E0918AF,21,2022-02-23,Local,8.91229,DE,Europe
+424,"4661 Jennifer Expressway Apt. 500
+Lukebury, NH 33096, Westchester",41.85059,,Westchester,WE-B278D336,62,1997-11-14,Super Store,-87.882,US,America
+425,"Studio 2
+Rachel turnpike
+Shawbury
+W0 9FJ, Bushey",51.64316,,Bushey,BU-FB96B095,86,2021-11-24,Outlet,-0.36053,GB,Europe
+426,"Biggenstraße 13
+01718 Weißenfels, Korschenbroich",51.19139,,Korschenbroich,KO-975B107F,37,2017-05-28,Local,6.51352,DE,Europe
+427,"15 Jeffrey pines
+Victoriamouth
+OL4 4LX, Exeter",50.7236,,Exeter,EX-2E8DF595,35,1998-08-05,Local,-3.52751,GB,Europe
+428,"Flat 81
+Holly village
+Weststad
+W7J 4YP, Hartley",51.38673,,Hartley,HA-CCBCBF87,24,2001-06-06,Local,0.30367,GB,Europe
+429,"Studio 2
+Rosie estate
+South Henryport
+SP6E 4HT, Arbroath",56.56317,,Arbroath,AR-ADA61B10,134,2006-10-03,Super Store,-2.58736,GB,Europe
+430,"935 Brenda knolls
+East Lynnetown
+S0T 9UB, Rutherglen",55.82885,,Rutherglen,RU-F0666E4B,32,2006-10-09,Local,-4.21376,GB,Europe
+431,"Studio 2
+Sam wells
+Port Ireneport
+W9 5YG, Walton-on-the-Naze",51.84819,,Walton-on-the-Naze,WA-A34BF06C,130,2016-03-20,Super Store,1.26738,GB,Europe
+432,"9 Bennett summit
+East Bethland
+E9U 8YH, Kingston upon Hull",53.7446,,Kingston upon Hull,KI-137ED849,40,2003-05-01,Local,-0.33525,GB,Europe
+433,"46 Simpson view
+North Heather
+KY8B 5TD, Belper",53.0233,,Belper,BE-6F48991F,77,1994-12-27,Super Store,-1.48119,GB,Europe
+434,"Schäferallee 56
+41888 Bruchsal, Charlottenburg-Nord",52.53048,,Charlottenburg-Nord,CH-C98AC168,39,2021-02-28,Local,13.29371,DE,Europe
+435,"Studio 57
+Adams river
+East Garry
+KW0 8FQ, Devizes",51.35084,,Devizes,DE-12392F66,139,1996-10-16,Super Store,-1.99421,GB,Europe
+436,"754 Kim streets
+New Paigemouth
+E5 7AE, Barnet",51.65,,Barnet,BA-41B2EB4B,8,2022-07-16,Mall Kiosk,-0.2,GB,Europe
+437,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+438,"Flat 86
+Wendy mountain
+South Phillip
+AL2N 3AE, Winsford",53.19146,,Winsford,WI-1EA140B1,68,1996-11-16,Outlet,-2.52398,GB,Europe
+439,"265 Jasmine stravenue
+Mauricehaven
+SO7 2UY, Chapletown",53.46506,,Chapletown,CH-01D85C8D,35,2005-09-01,Local,-1.47217,GB,Europe
+440,"8 Watkins walk
+Goodwinton
+B8 5LS, Viewpark",55.82737,,Viewpark,VI-68DB8362,29,2022-08-20,Local,-4.0573,GB,Europe
+441,"Flat 89
+Ricky trafficway
+East Alicechester
+N46 8ZT, Rhosllanerchrugog",53.00974,,Rhosllanerchrugog,RH-80D609C9,23,2017-01-14,Local,-3.05814,GB,Europe
+442,"Flat 98H
+Stephanie squares
+Port Lindsey
+SA6Y 1ZN, Aberdeen",57.14369,,Aberdeen,AB-D5ABF437,22,2020-12-15,Local,-2.09814,GB,Europe
+443,"Studio 31
+Graeme via
+North Amanda
+B30 4PJ, Belper",53.0233,,Belper,BE-B069E157,40,2019-10-30,Local,-1.48119,GB,Europe
+444,"936 Foster forge
+Tracyside
+W0 3GT, Walton-on-the-Naze",51.84819,,Walton-on-the-Naze,WA-A41DA979,98,2014-06-04,Super Store,1.26738,GB,Europe
+445,"Flat 7
+Stephanie lake
+Morrisside
+HP8 8LH, Cowes",50.76306,,Cowes,CO-473A9FBB,94,2008-06-08,Super Store,-1.29772,GB,Europe
+446,"Täschestraße 25
+39039 Nördlingen, Kirchlengern",52.2,,Kirchlengern,KI-78096E8C,61,2005-05-12,Super Store,8.63333,DE,Europe
+447,K0ODETRLS3,K8CXLZDP07,UXMWDMX1LC,3VHFDNP8ET,9D4LK7X4LZ,D23PCWSM6S,36IIMAQD58,NN04B3F6UQ,JZP8MIJTPZ,B3EH2ZGQAV,1WZB1TE1HL
+448,"Studio 8
+Moss mall
+West Linda
+M0E 6XR, High Wycombe",51.62907,,High Wycombe,HI-EEA7AE62,33,1998-05-14,Local,-0.74934,GB,Europe
+449,"Baumplatz 6
+80114 Kötzting, Bretten",49.03685,,Bretten,BR-662EC74C,35,2020-10-17,Local,8.70745,DE,Europe
+450,"Gotthilf-Rose-Straße 7/3
+45457 Feuchtwangen, Bad Honnef",50.64336,,Bad Honnef,BA-B4AED588,36,2001-05-12,Local,7.2278,DE,eeEurope

@@ -26,7 +26,7 @@ class DatabaseConnector:
         engine = self.init_db_engine()
         inspector = inspect(engine)
         return inspector.get_table_names()
-    
+
     def upload_to_db(self, df, table_name):
         """
         Uploads a DataFrame to the specified table in the database.

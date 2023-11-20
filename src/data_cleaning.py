@@ -32,12 +32,39 @@ class DataCleaning():
 
         # Handle missing values - remove all rows with any null values
         df.dropna(inplace=True)
+        return df
+
+    def clean_card_data(self, df):
+
+        # Replace 'NULL' strings with NaN
+        df.replace('NULL', np.nan, inplace=True)
+        
+        # Drop rows with any null values
+        df.dropna(inplace=True)
+
+        # Convert date columns to a uniform format, coercing errors to NaT
+        df['expiry_date'] = pd.to_datetime(df['expiry_date'], format="%m/%y", errors='coerce').dt.date
+        df['date_payment_confirmed'] = pd.to_datetime(df['date_payment_confirmed'], errors='coerce').dt.date
+
+        # Drop rows with any null values
+        df.dropna(inplace=True)
+        return df
+
+    def clean_store_data(self, csv_file):
+        # Read data from CSV
+        df = pd.read_csv(csv_file)
+
+        # Apply your cleaning operations here
+        # Example: Replace 'NULL' strings with NaN and drop rows with null values
+        df.replace('NULL', np.nan, inplace=True)
+        df.dropna(inplace=True)
 
         return df
+    
 
 
 if __name__ == '__main__':
     cleaner = DataCleaning()
-    cleaned_data = cleaner.clean_user_data('legacy_users.csv')
+    cleaned_data = cleaner.clean_store_data('store_data.csv')
     # Display the first few rows of the cleaned data
     print(cleaned_data.head())
