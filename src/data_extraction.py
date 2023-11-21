@@ -1,29 +1,23 @@
-from database_utils import DatabaseConnector
 import pandas as pd
 import tabula
 import requests
 import logging
 import boto3
+from typing import Dict, Any
+from database_utils import DatabaseConnector
 
 
 class DataExtractor:
     """
     DataExtractor class for extracting data from various sources including databases, PDFs, and APIs.
-
-    Attributes:
-        API_KEY (str): API key for authentication with the web API.
-        HEADER (dict): Headers to be used for API requests, including the API key.
-        NUMBER_OF_STORES_URL (str): URL to fetch the number of stores from the API.
-        STORE_DETAILS_URL (str): Base URL to fetch individual store details from the API.
     """
 
-    API_KEY = "[REDACTED]"
-    HEADER = {"x-api-key": API_KEY}
+    HEADER = {"x-api-key": "[REDACTED]"}
     NUMBER_OF_STORES_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/number_stores"
     STORE_DETAILS_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/store_details"
     S3_PATH = "s3://data-handling-public/products.csv"
 
-    def read_rds_table(self, db_connector, table_name):
+    def read_rds_table(self, db_connector: DatabaseConnector, table_name: str) -> pd.DataFrame:
         """
         Reads a table from a relational database system (RDS).
 
@@ -49,7 +43,7 @@ class DataExtractor:
         df = pd.read_sql(query, engine)
         return df
 
-    def retrieve_pdf_data(self, link):
+    def retrieve_pdf_data(self, link: str) -> pd.DataFrame:
         """
         Extracts data from a PDF file available at the specified URL.
 
@@ -66,7 +60,7 @@ class DataExtractor:
         combined_df = pd.concat(dfs, ignore_index=True)
         return combined_df
 
-    def list_number_of_stores(self, url=NUMBER_OF_STORES_URL, headers=HEADER):
+    def list_number_of_stores(self, url: str =NUMBER_OF_STORES_URL, headers: dict =HEADER) -> Dict[str, Any]:
         """
         Retrieves the number of stores from the API.
 
@@ -115,7 +109,7 @@ class DataExtractor:
                 logging.error(f"Error retrieving data for store {store_number}: {e}")
         return pd.DataFrame(all_stores)
 
-    def extract_from_s3(self, s3_url):
+    def extract_from_s3(self, s3_url: str) -> pd.DataFrame:
         """
         Extracts data from an S3 bucket given an HTTP S3 URL. Determines the file
         type (CSV or JSON) based on the URL and reads the data accordingly.

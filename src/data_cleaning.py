@@ -1,31 +1,23 @@
 import pandas as pd
 import numpy as np
+import re
 from database_utils import DatabaseConnector
 from data_extraction import DataExtractor
-import re
 
 
 class DataCleaning:
-    def clean_user_data(self, df):
+    def clean_user_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Cleans user data DataFrame.
-
-        - Sets 'index' column as DataFrame index.
-        - Converts 'date_of_birth' and 'join_date' to datetime format.
-        - Updates 'country_code' for 'United Kingdom' entries.
-        - Validates phone numbers based on country code.
-        - Drops rows with any null values.
         """
-        # Set the 'index' column as the DataFrame index for easier data manipulation
-        df.set_index("index", inplace=True)
+        # Removes null values and sets index column
+        self._clean_dataframe(df=df, index="index")
 
-        # Convert 'date_of_birth' and 'join_date' to datetime format, handling parsing errors
-        df["date_of_birth"] = pd.to_datetime(
-            df["date_of_birth"], errors="coerce"
-        ).dt.date
+        # Convert 'date_of_birth' & 'join_date' to datetime format
+        df["date_of_birth"] = pd.to_datetime(df["date_of_birth"], errors="coerce").dt.date
         df["join_date"] = pd.to_datetime(df["join_date"], errors="coerce").dt.date
 
-        # Update 'country_code' for entries from the United Kingdom
+        # Correct errors in 'country_code' for entries from the United Kingdom
         df.loc[df["country"] == "United Kingdom", "country_code"] = "GB"
 
         # Define regular expressions for phone number validation
@@ -60,21 +52,14 @@ class DataCleaning:
         df.dropna(inplace=True)
         return df
 
-    def clean_card_data(self, df):
+    def clean_card_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Cleans card data DataFrame.
-
-        - Replaces 'NULL' strings with NaN.
-        - Converts date columns ('expiry_date', 'date_payment_confirmed') to uniform datetime format.
-        - Drops rows with any null values.
         """
-        # Replace 'NULL' strings with NaN for consistent missing value handling
-        df.replace("NULL", np.nan, inplace=True)
+        # Removes null values and sets index column
+        self._clean_dataframe(df=df)
 
-        # Drop rows with any null values
-        df.dropna(inplace=True)
-
-        # Standardize date formats, converting to datetime and handling parsing errors
+        # Standardise date formats, converting to datetime format
         df["expiry_date"] = pd.to_datetime(
             df["expiry_date"], format="%m/%y", errors="coerce"
         ).dt.date
@@ -86,7 +71,7 @@ class DataCleaning:
         df.dropna(inplace=True)
         return df
 
-    def clean_store_data(self, csv_file):
+    def clean_store_data(self, csv_file: str) -> pd.DataFrame:
         """
         Cleans store data from a CSV file.
 
@@ -98,13 +83,9 @@ class DataCleaning:
         """
         # Read data from CSV and set 'index' column as DataFrame index
         df = pd.read_csv(csv_file)
-        df.set_index("index", inplace=True)
 
-        # Remove 'lat' column (assuming it's redundant or not needed)
-        df.drop(columns=["lat"], inplace=True)
-
-        # Replace 'NULL' strings with NaN for consistent missing value handling
-        df.replace("NULL", np.nan, inplace=True)
+        # Removes null values and sets index column
+        self._clean_dataframe(df=df, index="index")
 
         # Replace invalid country codes with NaN
         df.loc[~df["country_code"].isin(["DE", "US", "GB"]), "country_code"] = np.nan
@@ -145,7 +126,7 @@ class DataCleaning:
         df.dropna(inplace=True)
         return df
 
-    def convert_product_weights(self, df):
+    def convert_product_weights(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Converts product weights to kilograms. Handles weights in various formats,
         including those with multiplication (e.g., '5 x 145g') and different units (g, ml).
@@ -202,8 +183,8 @@ class DataCleaning:
         df["weight_kg"] = pd.to_numeric(df["weight_kg"], errors="coerce").round(5)
 
         return df
-    
-    def clean_products_data(self, df):
+
+    def clean_products_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Cleans the DataFrame of any additional erroneous values.
 
@@ -213,36 +194,31 @@ class DataCleaning:
         Returns:
             pandas.DataFrame: Cleaned DataFrame.
         """
-
-        # Remove duplicates
-        df = df.drop_duplicates()
         
-        df.set_index('Unnamed: 0', inplace=True)
-        
-        df.replace("NULL", np.nan, inplace=True)
-        df.dropna(inplace=True)
+        # Removes null values and sets index column
+        self._clean_dataframe(df=df, index="Unnamed: 0")
 
         # Standardize text fields (example: 'product_name' column)
-        if 'product_name' in df.columns:
-            df['product_name'] = df['product_name'].str.strip().str.lower()
+        if "product_name" in df.columns:
+            df["product_name"] = df["product_name"].str.strip().str.lower()
 
         # Remove pound symbol from 'Price' and convert to numeric
-        if 'product_price' in df.columns:
-            df['product_price'] = df['product_price'].str.replace('£', '').str.strip()
-            df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce').round(2)
+        if "product_price" in df.columns:
+            df["product_price"] = df["product_price"].str.replace("£", "").str.strip()
+            df["product_price"] = pd.to_numeric(
+                df["product_price"], errors="coerce"
+            ).round(2)
 
-        df.rename(columns={'product_price': 'product_price_pounds'}, inplace=True)
+        df.rename(columns={"product_price": "product_price_pounds"}, inplace=True)
 
-        df["date_added"] = pd.to_datetime(
-            df["date_added"], errors="coerce"
-        ).dt.date
+        df["date_added"] = pd.to_datetime(df["date_added"], errors="coerce").dt.date
 
         return df
 
-    def clean_orders_data(self, df):
+    def clean_orders_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Cleans the orders table data by removing specified columns,
-        setting the index, replacing 'NULL' values with NaN, and 
+        setting the index, replacing 'NULL' values with NaN, and
         converting data types where necessary.
 
         Parameters:
@@ -253,65 +229,78 @@ class DataCleaning:
         """
 
         # Remove the specified columns
-        df.drop(columns=["first_name", "last_name", "1", "level_0"], inplace=True, errors='ignore')
+        df.drop(
+            columns=["first_name", "last_name", "1", "level_0"],
+            inplace=True,
+            errors="ignore",
+        )
 
-        # Set 'index' as the new DataFrame index
-        df.set_index('index', inplace=True)
+        # Removes null values and sets index column
+        self._clean_dataframe(df=df)
 
-        # Replace 'NULL' strings with NaN
-        df.replace("NULL", np.nan, inplace=True)
-
-        # Drop rows with NaN values
-        df.dropna(inplace=True)
-
-        # Convert 'product_quantity' to int
-        df['product_quantity'] = df['product_quantity'].astype(int)
+        # Convert 'product_quantity' to int to save memory
+        df["product_quantity"] = df["product_quantity"].astype(int)
 
         return df
 
-    def clean_date_times(self, df):
+    def clean_date_times(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Cleans the date_times data by filtering out unwanted time periods, 
-        combining year, month, day, and timestamp into a single 'date_time' 
-        column with standard y-m-d H:M:S formatting, and removing rows with 
-        NULL values.
+        Cleans the date_times data.
 
-        Parameters:
-        df (DataFrame): A pandas DataFrame containing the date_times data.
+        Args:
+            df (pd.DataFrame): DataFrame containing the date_times data.
 
         Returns:
-        DataFrame: A cleaned DataFrame.
+            pd.DataFrame: Cleaned DataFrame.
         """
+        # Removes null values and sets index column
+        self._clean_dataframe(df=df)
 
-        # Replace 'NULL' strings with NaN
-        df.replace("NULL", np.nan, inplace=True)
-
-        # Filter rows where time period is not in the specified list and create a copy
-        valid_time_periods = ['Late_Hours', 'Morning', 'Midday', 'Evening']
-        df = df[df['time_period'].isin(valid_time_periods)].copy()
-
-        # Drop rows with NaN values in key columns
-        df.dropna(subset=['year', 'month', 'day', 'timestamp', 'time_period'], inplace=True)
+        # Filter rows where time period is not in the specified list
+        valid_time_periods = ["Late_Hours", "Morning", "Midday", "Evening"]
+        df = df[df["time_period"].isin(valid_time_periods)]
 
         # Combine year, month, day, and timestamp into one 'date_time' column
-        df['date_time'] = pd.to_datetime({
-            'year': df['year'],
-            'month': df['month'],
-            'day': df['day'],
-            'hour': df['timestamp'].str.split(':').str[0],
-            'minute': df['timestamp'].str.split(':').str[1],
-            'second': df['timestamp'].str.split(':').str[2]
-        })
+        df["date_time"] = pd.to_datetime(
+            {
+                "year": df["year"],
+                "month": df["month"],
+                "day": df["day"],
+                "hour": df["timestamp"].str.split(":").str[0],
+                "minute": df["timestamp"].str.split(":").str[1],
+                "second": df["timestamp"].str.split(":").str[2],
+            }
+        )
 
-        # Drop the original year, month, day, timestamp, and time_period columns
-        df.drop(columns=['year', 'month', 'day', 'timestamp', 'time_period'], inplace=True)
+        # Drop the original columns
+        df.drop(columns=["year", "month", "day", "timestamp", "time_period"], inplace=True)
 
         return df
+    
+    def _clean_dataframe(self, df: pd.DataFrame, index: str = None) -> None:
+        """
+        Replaces 'NULL' strings with NaN, removes duplicates, and drops rows with NaN values.
 
+        Args:
+            df (pd.DataFrame): DataFrame to be cleaned.
+            index (str, optional): Column name to set as DataFrame index. Defaults to None.
+        """
+        # Set 'index' as the new DataFrame index if provided
+        if index and index in df.columns:
+            df.set_index(index, inplace=True)
+
+        # Replace 'NULL' strings with NaN, remove duplicates, and drop rows with NaN values
+        df.replace("NULL", np.nan, inplace=True)
+        df.drop_duplicates(inplace=True)
+        df.dropna(inplace=True)
+        
 
 if __name__ == "__main__":
     extractor = DataExtractor()
-    df = extractor.read_rds_table(db_connector=DatabaseConnector('../config/db_creds.yaml'), table_name='orders_table')
+    df = extractor.read_rds_table(
+        db_connector=DatabaseConnector("../config/db_creds.yaml"),
+        table_name="orders_table",
+    )
     clean = DataCleaning()
     df_cleaned = clean.clean_orders_data(df)
     print(df_cleaned.head())

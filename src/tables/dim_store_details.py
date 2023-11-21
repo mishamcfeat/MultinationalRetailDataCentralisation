@@ -10,12 +10,12 @@ if __name__ == '__main__':
 
     # Step 2: Clean Data
     cleaner = DataCleaning()
-    # df_cleaned = cleaner.clean_user_data(df_extracted)
-    # df_cleaned = cleaner.clean_store_data('../csv/store_data.csv')
+
     df_cleaned = cleaner.clean_store_data('../csv/store_data.csv')
 
     # Step 3: Upload Cleaned Data
     # Assuming DatabaseConnector can connect to 'sales_data' database
+    HEADER = {"x-api-key": "[REDACTED]"}
     db_connector_store_data = DatabaseConnector('../config/pgadmin_creds.yaml')
     db_connector_store_data.upload_to_db(df_cleaned, 'dim_store_details')
 
