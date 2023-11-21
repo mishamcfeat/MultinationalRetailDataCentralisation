@@ -115,25 +115,36 @@ class DataExtractor:
                 logging.error(f"Error retrieving data for store {store_number}: {e}")
         return pd.DataFrame(all_stores)
 
-    def extract_from_s3(self, s3_path=S3_PATH):
+    def extract_from_s3(self, s3_url):
         """
-        Extracts data from an S3 bucket.
+        Extracts data from an S3 bucket given an HTTP S3 URL. Determines the file
+        type (CSV or JSON) based on the URL and reads the data accordingly.
 
         Args:
-            s3_path (str): S3 path to the file (e.g., 's3://bucket-name/file.csv').
+            s3_url (str): HTTP URL to the S3 file.
 
         Returns:
             DataFrame: Data extracted from the S3 file.
         """
-        # Extract bucket name and file path from s3_path
-        bucket_name, file_path = s3_path.replace("s3://", "").split("/", 1)
+        # Parse bucket name and file path from s3_url
+        bucket_name = s3_url.split('/')[2].split('.')[0]
+        file_path = '/'.join(s3_url.split('/')[3:])
+
+        # Determine file type from the URL
+        file_type = file_path.split('.')[-1]
 
         # Initialise boto3 client
         s3_client = boto3.client("s3")
 
-        # Download file and read into a DataFrame
+        # Download file and read into a DataFrame based on file type
         obj = s3_client.get_object(Bucket=bucket_name, Key=file_path)
-        df = pd.read_csv(obj["Body"])
+        if file_type.lower() == 'json':
+            df = pd.read_json(obj["Body"])
+        elif file_type.lower() == 'csv':
+            df = pd.read_csv(obj["Body"])
+        else:
+            raise ValueError("Unsupported file type. Please provide a CSV or JSON file.")
+
         return df
 
 
@@ -150,6 +161,9 @@ if __name__ == "__main__":
     # store_data.to_csv("store_data.csv", index=False) 
 
     # data = extractor.extract_from_s3()
-    
-    df = extractor.read_rds_table(db_connector=DatabaseConnector('../config/db_creds.yaml'), table_name='orders_table')
-    print(df.head())
+
+    # df = extractor.read_rds_table(db_connector=DatabaseConnector('../config/db_creds.yaml'), table_name='orders_table')
+    # print(df.head())
+
+    # data_json = extractor.extract_from_s3('https://data-handling-public.s3.eu-west-1.amazonaws.com/date_details.json')
+    # print(data_json)

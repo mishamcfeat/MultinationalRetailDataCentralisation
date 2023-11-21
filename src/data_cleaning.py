@@ -269,6 +269,45 @@ class DataCleaning:
 
         return df
 
+    def clean_date_times(self, df):
+        """
+        Cleans the date_times data by filtering out unwanted time periods, 
+        combining year, month, day, and timestamp into a single 'date_time' 
+        column with standard y-m-d H:M:S formatting, and removing rows with 
+        NULL values.
+
+        Parameters:
+        df (DataFrame): A pandas DataFrame containing the date_times data.
+
+        Returns:
+        DataFrame: A cleaned DataFrame.
+        """
+
+        # Replace 'NULL' strings with NaN
+        df.replace("NULL", np.nan, inplace=True)
+
+        # Filter rows where time period is not in the specified list and create a copy
+        valid_time_periods = ['Late_Hours', 'Morning', 'Midday', 'Evening']
+        df = df[df['time_period'].isin(valid_time_periods)].copy()
+
+        # Drop rows with NaN values in key columns
+        df.dropna(subset=['year', 'month', 'day', 'timestamp', 'time_period'], inplace=True)
+
+        # Combine year, month, day, and timestamp into one 'date_time' column
+        df['date_time'] = pd.to_datetime({
+            'year': df['year'],
+            'month': df['month'],
+            'day': df['day'],
+            'hour': df['timestamp'].str.split(':').str[0],
+            'minute': df['timestamp'].str.split(':').str[1],
+            'second': df['timestamp'].str.split(':').str[2]
+        })
+
+        # Drop the original year, month, day, timestamp, and time_period columns
+        df.drop(columns=['year', 'month', 'day', 'timestamp', 'time_period'], inplace=True)
+
+        return df
+
 
 if __name__ == "__main__":
     extractor = DataExtractor()
