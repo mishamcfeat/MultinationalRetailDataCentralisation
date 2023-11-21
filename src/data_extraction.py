@@ -3,6 +3,7 @@ import pandas as pd
 import tabula
 import requests
 import logging
+import boto3
 
 
 class DataExtractor:
@@ -18,12 +19,9 @@ class DataExtractor:
 
     API_KEY = "[REDACTED]"
     HEADER = {"x-api-key": API_KEY}
-    NUMBER_OF_STORES_URL = (
-        "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/number_stores"
-    )
-    STORE_DETAILS_URL = (
-        "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/store_details"
-    )
+    NUMBER_OF_STORES_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/number_stores"
+    STORE_DETAILS_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/store_details"
+    S3_PATH = "s3://data-handling-public/products.csv"
 
     def read_rds_table(self, db_connector, table_name):
         """
@@ -117,12 +115,41 @@ class DataExtractor:
                 logging.error(f"Error retrieving data for store {store_number}: {e}")
         return pd.DataFrame(all_stores)
 
+    def extract_from_s3(self, s3_path=S3_PATH):
+        """
+        Extracts data from an S3 bucket.
+
+        Args:
+            s3_path (str): S3 path to the file (e.g., 's3://bucket-name/file.csv').
+
+        Returns:
+            DataFrame: Data extracted from the S3 file.
+        """
+        # Extract bucket name and file path from s3_path
+        bucket_name, file_path = s3_path.replace("s3://", "").split("/", 1)
+
+        # Initialise boto3 client
+        s3_client = boto3.client("s3")
+
+        # Download file and read into a DataFrame
+        obj = s3_client.get_object(Bucket=bucket_name, Key=file_path)
+        df = pd.read_csv(obj["Body"])
+        return df
+
 
 if __name__ == "__main__":
     extractor = DataExtractor()
-    number_of_stores = extractor.list_number_of_stores()
-    print(number_of_stores)
+    # df = extractor.read_rds_table(db_connector=DatabaseConnector('../config/db_creds.yaml'), table_name='legacy_users')
+    # df = extractor.retrieve_pdf_data('https://data-handling-public.s3.eu-west-1.amazonaws.com/card_details.pdf')
 
-    # Fetching store data and saving it to a CSV file
-    store_data = extractor.retrieve_stores_data(number_of_stores["number_stores"])
-    store_data.to_csv("store_data.csv", index=False)  # Save data to CSV
+    # number_of_stores = extractor.list_number_of_stores()
+    # print(number_of_stores)
+
+    # # Fetching store data and saving it to a CSV file
+    # store_data = extractor.retrieve_stores_data(number_of_stores["number_stores"])
+    # store_data.to_csv("store_data.csv", index=False) 
+
+    # data = extractor.extract_from_s3()
+    
+    df = extractor.read_rds_table(db_connector=DatabaseConnector('../config/db_creds.yaml'), table_name='orders_table')
+    print(df.head())

@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+from database_utils import DatabaseConnector
+from data_extraction import DataExtractor
+import re
 
 
 class DataCleaning:
@@ -141,3 +144,135 @@ class DataCleaning:
         # Drop rows with missing values after conversions
         df.dropna(inplace=True)
         return df
+
+    def convert_product_weights(self, df):
+        """
+        Converts product weights to kilograms. Handles weights in various formats,
+        including those with multiplication (e.g., '5 x 145g') and different units (g, ml).
+        Assumes a 1:1 ratio for ml to g for conversion.
+
+        Args:
+            df (pandas.DataFrame): DataFrame containing product data with a 'weight' column.
+
+        Returns:
+            pandas.DataFrame: Updated DataFrame with a new column 'weight_kg' representing weights in kg.
+        """
+
+        def convert_to_kg(weight_str):
+            """
+            Converts a weight string to kilograms.
+            Handles multiplication and different units (g, ml).
+
+            Args:
+                weight_str (str): Weight string from the DataFrame.
+
+            Returns:
+                float: Weight converted to kilograms, or None if conversion is not possible.
+            """
+            if not isinstance(weight_str, str) or pd.isna(weight_str):
+                return None
+
+            # Handle multiplication format, e.g., '5 x 145g'
+            if "x" in weight_str:
+                parts = weight_str.split("x")
+                try:
+                    quantity = float(re.findall(r"(\d+(\.\d+)?)", parts[0])[0][0])
+                    unit_weight = float(re.findall(r"(\d+(\.\d+)?)", parts[1])[0][0])
+                    total_weight = quantity * unit_weight
+                except (IndexError, ValueError):
+                    return None
+            else:
+                # Extract numeric weight from string
+                numeric_match = re.findall(r"(\d+(\.\d+)?)", weight_str)
+                if numeric_match:
+                    total_weight = float(numeric_match[0][0])
+                else:
+                    return None
+
+            # Convert grams and milliliters to kilograms
+            if "g" in weight_str or "ml" in weight_str:
+                total_weight /= 1000
+
+            return total_weight
+
+        df["weight_kg"] = df["weight"].apply(convert_to_kg)
+        # Drop the original 'weight' column
+        df.drop(columns=["weight"], inplace=True)
+        # Convert 'weight_kg' to numeric and round to 5 decimal places
+        df["weight_kg"] = pd.to_numeric(df["weight_kg"], errors="coerce").round(5)
+
+        return df
+    
+    def clean_products_data(self, df):
+        """
+        Cleans the DataFrame of any additional erroneous values.
+
+        Args:
+            df (pandas.DataFrame): DataFrame containing product data.
+
+        Returns:
+            pandas.DataFrame: Cleaned DataFrame.
+        """
+
+        # Remove duplicates
+        df = df.drop_duplicates()
+        
+        df.set_index('Unnamed: 0', inplace=True)
+        
+        df.replace("NULL", np.nan, inplace=True)
+        df.dropna(inplace=True)
+
+        # Standardize text fields (example: 'product_name' column)
+        if 'product_name' in df.columns:
+            df['product_name'] = df['product_name'].str.strip().str.lower()
+
+        # Remove pound symbol from 'Price' and convert to numeric
+        if 'product_price' in df.columns:
+            df['product_price'] = df['product_price'].str.replace('£', '').str.strip()
+            df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce').round(2)
+
+        df.rename(columns={'product_price': 'product_price_pounds'}, inplace=True)
+
+        df["date_added"] = pd.to_datetime(
+            df["date_added"], errors="coerce"
+        ).dt.date
+
+        return df
+
+    def clean_orders_data(self, df):
+        """
+        Cleans the orders table data by removing specified columns,
+        setting the index, replacing 'NULL' values with NaN, and 
+        converting data types where necessary.
+
+        Parameters:
+        df (DataFrame): A pandas DataFrame containing the orders data.
+
+        Returns:
+        DataFrame: A cleaned DataFrame.
+        """
+
+        # Remove the specified columns
+        df.drop(columns=["first_name", "last_name", "1", "level_0"], inplace=True, errors='ignore')
+
+        # Set 'index' as the new DataFrame index
+        df.set_index('index', inplace=True)
+
+        # Replace 'NULL' strings with NaN
+        df.replace("NULL", np.nan, inplace=True)
+
+        # Drop rows with NaN values
+        df.dropna(inplace=True)
+
+        # Convert 'product_quantity' to int
+        df['product_quantity'] = df['product_quantity'].astype(int)
+
+        return df
+
+
+if __name__ == "__main__":
+    extractor = DataExtractor()
+    df = extractor.read_rds_table(db_connector=DatabaseConnector('../config/db_creds.yaml'), table_name='orders_table')
+    clean = DataCleaning()
+    df_cleaned = clean.clean_orders_data(df)
+    print(df_cleaned.head())

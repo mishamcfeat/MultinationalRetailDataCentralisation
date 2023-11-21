@@ -50,6 +50,6 @@ class DatabaseConnector:
 
 
 if __name__ == '__main__':
-    db = DatabaseConnector()
+    db = DatabaseConnector('../config/db_creds.yaml')
     print(db.list_db_tables())
-    #db.upload_to_db(df=DataExtractor(), table_name='legacy_users')
+    # db.upload_to_db(df=DataExtractor(), table_name='legacy_users')
