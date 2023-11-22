@@ -60,44 +60,20 @@ class DataExtractor:
         combined_df = pd.concat(dfs, ignore_index=True)
         return combined_df
 
-    def list_number_of_stores(self, url: str =NUMBER_OF_STORES_URL, headers: dict =HEADER) -> Dict[str, Any]:
+    def list_number_of_stores(self, url=NUMBER_OF_STORES_URL, headers=HEADER) -> dict:
         """
         Retrieves the number of stores from the API.
-
-        Args:
-            url (str): URL to fetch the number of stores.
-            headers (dict): Request headers including the API key.
-
-        Returns:
-            dict: A dictionary containing the number of stores.
-
-        Raises:
-            Exception: If the API request fails.
         """
-        # Make API request to get the number of stores
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
             return response.json()
         else:
-            raise Exception(
-                f"API request failed with status code {response.status_code}"
-            )
+            raise Exception(f"API request failed with status code {response.status_code}")
 
-    def retrieve_stores_data(
-        self, number_of_stores=451, base_url=STORE_DETAILS_URL, headers=HEADER
-    ):
+    def retrieve_stores_data(self, number_of_stores=451, base_url=STORE_DETAILS_URL, headers=HEADER) -> pd.DataFrame:
         """
         Retrieves details for each store from the API.
-
-        Args:
-            number_of_stores (int): The number of stores to retrieve data for.
-            base_url (str): Base URL for fetching store details.
-            headers (dict): Request headers including the API key.
-
-        Returns:
-            DataFrame: A DataFrame containing details of all stores.
         """
-        # Collect data for each store and handle possible HTTP errors
         all_stores = []
         for store_number in range(1, number_of_stores + 1):
             try:
@@ -161,3 +137,20 @@ if __name__ == "__main__":
 
     # data_json = extractor.extract_from_s3('https://data-handling-public.s3.eu-west-1.amazonaws.com/date_details.json')
     # print(data_json)
+    # Constants
+    HEADER = {"x-api-key": "[REDACTED]"}
+    NUMBER_OF_STORES_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/number_stores"
+    STORE_DETAILS_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/store_details"
+    
+    fetcher = DataExtractor()
+
+    # Get the number of stores from the API
+    stores_info = fetcher.list_number_of_stores()
+    number_of_stores = stores_info.get('number_of_stores', 451)  # Default to 451 if not specified
+
+    # Retrieve store data
+    store_data = fetcher.retrieve_stores_data(number_of_stores=number_of_stores)
+
+    # Save to CSV file
+    store_data.to_csv('store_data_two.csv', index=False)
+    print("Store data saved to store_data_two.csv")

@@ -58,13 +58,34 @@ class DatabaseConnector:
         inspector = inspect(engine)
         return inspector.get_table_names()
 
-    def upload_to_db(self, df: pd.DataFrame, table_name: str) -> None:
+    def alter_column_data_types(self, table_name: str, column_type_mappings: dict) -> None:
         """
-        Uploads a DataFrame to a specified table in the database.
+        Alters the data types of specified columns in a table.
+
+        Args:
+            table_name (str): The name of the table to alter.
+            column_type_mappings (dict): A dictionary mapping column names to their new data types.
+
+        Raises:
+            SQLAlchemyError: If an error occurs during the alteration process.
+        """
+        try:
+            engine = self.init_db_engine()
+            with engine.connect() as conn:
+                for column, new_type in column_type_mappings.items():
+                    conn.execute(f"ALTER TABLE {table_name} ALTER COLUMN {column} TYPE {new_type};")
+            print(f"Data types altered successfully for table '{table_name}'")
+        except SQLAlchemyError as e:
+            print(f"An error occurred while altering data types in table '{table_name}':", e)
+
+    def upload_to_db(self, df: pd.DataFrame, table_name: str, primary_key: str = None) -> None:
+        """
+        Uploads a DataFrame to a specified table in the database and sets a primary key.
 
         Args:
             df (pd.DataFrame): The DataFrame to upload.
             table_name (str): The name of the target table in the database.
+            primary_key (str): The column name to be set as the primary key.
 
         Raises:
             ValueError: If df is not a pandas DataFrame.
@@ -75,10 +96,33 @@ class DatabaseConnector:
 
         try:
             engine = self.init_db_engine()
-            df.to_sql(table_name, engine, if_exists='replace', index=False)
-            print(f"Data uploaded successfully to table '{table_name}'")
+            with engine.begin() as conn:
+                df.to_sql(table_name, conn, if_exists='replace', index=False)
+                print(f"Data uploaded successfully to table '{table_name}'")
+                if primary_key:
+                    conn.execute(f"ALTER TABLE {table_name} ADD PRIMARY KEY ({primary_key});")
+                    print(f"Primary key '{primary_key}' set for table '{table_name}'")
         except SQLAlchemyError as e:
             print("An error occurred while uploading data to the database:", e)
+            
+    def execute_sql(self, sql: str) -> None:
+        """
+        Executes an SQL command in the connected database.
+
+        Args:
+            sql (str): The SQL command to execute.
+
+        Raises:
+            SQLAlchemyError: If an error occurs during the execution.
+        """
+        try:
+            engine = self.init_db_engine()
+            with engine.connect() as conn:
+                conn.execute(sql)
+            print(f"SQL command executed successfully.")
+        except SQLAlchemyError as e:
+            print(f"An error occurred while executing SQL command:", e)
+
 
 
 if __name__ == '__main__':
