@@ -75,7 +75,7 @@ class DataExtractor:
         Retrieves details for each store from the API.
         """
         all_stores = []
-        for store_number in range(1, number_of_stores + 1):
+        for store_number in range(0, number_of_stores):
             try:
                 url = f"{base_url}/{store_number}"
                 response = requests.get(url, headers=headers)

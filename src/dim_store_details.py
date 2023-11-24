@@ -1,6 +1,6 @@
 from database_utils import DatabaseConnector
 from data_cleaning import DataCleaning
-from data_extraction import DataExtractor  # Uncomment if needed
+from data_extraction import DataExtractor 
 
 if __name__ == "__main__":
     # Step 1: Extract Data
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     dim_store_details_mappings = {
         "longitude": "FLOAT USING longitude::double precision",
         "locality": "VARCHAR(255)",
-        "store_code": "VARCHAR(25)",
+        "store_code": "VARCHAR(12)",
         "staff_numbers": "SMALLINT",
         "opening_date": "DATE",
         "store_type": "VARCHAR(255)",

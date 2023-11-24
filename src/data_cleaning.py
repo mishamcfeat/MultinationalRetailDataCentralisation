@@ -18,7 +18,9 @@ class DataCleaning:
         df["date_of_birth"] = pd.to_datetime(
             df["date_of_birth"], format="mixed", errors="coerce"
         ).dt.date
-        df["join_date"] = pd.to_datetime(df["join_date"], format="mixed", errors="coerce").dt.date
+        df["join_date"] = pd.to_datetime(
+            df["join_date"], format="mixed", errors="coerce"
+        ).dt.date
 
         # Correct errors in 'country_code' for entries from the United Kingdom
         df.loc[df["country"] == "United Kingdom", "country_code"] = "GB"
@@ -57,22 +59,26 @@ class DataCleaning:
 
         return df
 
-    def clean_card_data(self, df: pd.DataFrame) -> pd.DataFrame:
+    def clean_card_data(self, csv_file: str) -> pd.DataFrame:
         """
         Cleans card data DataFrame.
         """
+        # Read data from CSV
+        df = pd.read_csv(csv_file)
+        
         # Removes null values and sets index column
-        self._clean_dataframe(df=df, index="Unnamed 0:")
-
+        self._clean_dataframe(df=df, index='Unnamed: 0')
+        
         # Standardise date formats, converting to datetime format
-        df["expiry_date"] = pd.to_datetime(df["expiry_date"], format="%m/%y", errors="coerce").dt.date
-        df["date_payment_confirmed"] = pd.to_datetime(df["date_payment_confirmed"], format="%Y-%m-%d", errors="coerce").dt.date
+        df["date_payment_confirmed"] = pd.to_datetime(
+            df["date_payment_confirmed"], format="mixed", errors="coerce"
+        ).dt.date
 
-        # Remove rows with any null values after date conversion
+        # Correct invalid card numbers by removing all leading question marks
+        df["card_number"] = df["card_number"].str.replace(r"^\?+", "", regex=True)
+        
         df.dropna(inplace=True)
-
-        # Remove or correct invalid card numbers
-        df = df[~df["card_number"].str.contains("\?", na=False)]
+        
         return df
 
     def clean_store_data(self, csv_file: str) -> pd.DataFrame:
@@ -85,10 +91,10 @@ class DataCleaning:
         # Drop the faulty 'lat' column
         df.drop(columns="lat", inplace=True)
 
-        # Replace the first row with NULL columns with website data
-        if df.iloc[0].isnull().all():
-            df.iloc[0] = "N/A"
-            df.at[0, "store_code"] = "WEB-1388012W"
+        # Fill null values in the first row (online store) with 'N/A'
+        df.iloc[0] = df.iloc[0].fillna("N/A")
+
+        self._clean_dataframe(df=df, index="index")
 
         # Replace invalid country codes with NaN
         df.loc[~df["country_code"].isin(["DE", "US", "GB"]), "country_code"] = np.nan
@@ -98,17 +104,24 @@ class DataCleaning:
         df.loc[df["continent"] == "eeAmerica", "continent"] = "America"
 
         # Process staff numbers
-        df["staff_numbers"] = pd.to_numeric(df["staff_numbers"].str.extract("(\d+)", expand=False), errors="coerce")
+        df["staff_numbers"] = pd.to_numeric(
+            df["staff_numbers"].str.extract("(\d+)", expand=False), errors="coerce"
+        )
 
         # Convert latitude and longitude to object type to accommodate N/A values
         df["latitude"] = df["latitude"].astype(object)
         df["longitude"] = df["longitude"].astype(object)
 
         # Convert 'opening_date' to datetime
-        df["opening_date"] = pd.to_datetime(df["opening_date"], errors="coerce").dt.date
+        df["opening_date"] = pd.to_datetime(
+            df["opening_date"], format="mixed", errors="coerce"
+        ).dt.date
 
         # Drop rows with missing values after conversions, except for the website entry
-        df.dropna(subset=[col for col in df.columns if col not in ["latitude", "longitude", "store_code"]], inplace=True)
+        df.dropna(inplace=True)
+
+        # Replace 'N/A' with NaN
+        df.replace("N/A", np.nan, inplace=True)
 
         return df
 
@@ -191,14 +204,18 @@ class DataCleaning:
         # Remove pound symbol from 'Price' and convert to numeric
         if "product_price" in df.columns:
             df["product_price"] = df["product_price"].str.replace("£", "").str.strip()
-            df["product_price"] = pd.to_numeric(df["product_price"], errors="coerce").round(2)
+            df["product_price"] = pd.to_numeric(
+                df["product_price"], errors="coerce"
+            ).round(2)
 
         df.rename(columns={"product_price": "product_price_pounds"}, inplace=True)
         df.rename(columns={"removed": "still_available"}, inplace=True)
         df.rename(columns={"EAN": "ean"}, inplace=True)
 
         # Convert 'still_available' to boolean based on text
-        df["still_available"] = np.where(df["still_available"] == "Still_avaliable", True, False)
+        df["still_available"] = np.where(
+            df["still_available"] == "Still_avaliable", True, False
+        )
 
         df["date_added"] = pd.to_datetime(df["date_added"], errors="coerce").dt.date
 
@@ -213,8 +230,8 @@ class DataCleaning:
         df["weight_class"] = np.select(conditions, choices, default="Unknown")
 
         # Validate and filter UUIDs
-        uuid_pattern = r'^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
-        df = df[df['uuid'].apply(lambda x: bool(re.match(uuid_pattern, str(x))))]
+        uuid_pattern = r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        df = df[df["uuid"].apply(lambda x: bool(re.match(uuid_pattern, str(x))))]
 
         return df
 
@@ -240,12 +257,12 @@ class DataCleaning:
 
         # Removes null values and sets index column
         self._clean_dataframe(df=df, index="index")
-        
+
         # Filter out entries with invalid 'user_uuid'
         df = df[df["user_uuid"].apply(lambda x: is_valid_uuid(x))]
-        
+
         df.rename(columns={"level_0": "order_id"}, inplace=True)
-        
+
         # Drop rows with missing values
         df.dropna(inplace=True)
 
@@ -295,14 +312,13 @@ class DataCleaning:
             df (pd.DataFrame): DataFrame to be cleaned.
             index (str, optional): Column name to set as DataFrame index. Defaults to None.
         """
+        # Replace 'NULL' strings with NaN, remove duplicates, and drop rows with NaN values
+        df.replace("NULL", np.nan, inplace=True)
+        df.dropna(inplace=True)
+        
         # Set 'index' as the new DataFrame index if provided
         if index and index in df.columns:
             df.set_index(index, inplace=True)
-
-        # Replace 'NULL' strings with NaN, remove duplicates, and drop rows with NaN values
-        df.replace("NULL", np.nan, inplace=True)
-        df.drop_duplicates(inplace=True)
-        df.dropna(inplace=True)
 
 
 def is_valid_uuid(uuid_to_test, version=4):
@@ -321,6 +337,7 @@ def is_valid_uuid(uuid_to_test, version=4):
     except ValueError:
         return False
     return str(uuid_obj) == uuid_to_test
+
 
 if __name__ == "__main__":
     cleaner = DataCleaning()
