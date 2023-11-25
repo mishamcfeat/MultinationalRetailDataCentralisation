@@ -18,6 +18,7 @@ if __name__ == '__main__':
     
     # Step 4: Alter Column Data Types
     dim_date_times_table_mappings = {
+        "timestamp": "TIME USING timestamp::time without time zone",
         "month": "VARCHAR(2)",  # Months range from 01 to 12
         "year": "VARCHAR(4)",   # Years are typically 4 digits long
         "day": "VARCHAR(2)",    # Days range from 01 to 31

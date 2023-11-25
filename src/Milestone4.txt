@@ -1,6 +1,0 @@
-#Task 1
-SELECT count(country_code), country_code
-FROM dim_store_details
-GROUP BY country_code
-
-#Task 2
