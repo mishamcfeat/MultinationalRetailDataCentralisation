@@ -1,6 +1,6 @@
-from database_utils import DatabaseConnector
-from data_cleaning import DataCleaning
-from data_extraction import DataExtractor
+from src.database_utils import DatabaseConnector
+from src.data_cleaning import DataCleaning
+from src.data_extraction import DataExtractor
 
 if __name__ == '__main__':
     # Step 1: Extract Data

@@ -1,13 +1,11 @@
-from database_utils import DatabaseConnector
-from data_cleaning import DataCleaning
-from data_extraction import DataExtractor
-import pandas as pd
+from src.database_utils import DatabaseConnector
+from src.data_cleaning import DataCleaning
+from src.data_extraction import DataExtractor
 
 if __name__ == '__main__':
     # Step 1: Extract Data
-    # extractor = DataExtractor()
-    # df_extracted = extractor.extract_from_s3("s3://data-handling-public/products.csv")
-    df_extracted = pd.read_csv('../csv/product_data.csv')
+    extractor = DataExtractor()
+    df_extracted = extractor.extract_from_s3("s3://data-handling-public/products.csv")
 
     # Step 2: Clean Data
     cleaner = DataCleaning()

@@ -1,10 +1,9 @@
+from database_utils import DatabaseConnector
 import pandas as pd
 import tabula
 import requests
 import logging
 import boto3
-from typing import Dict, Any
-from database_utils import DatabaseConnector
 
 
 class DataExtractor:

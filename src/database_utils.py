@@ -1,8 +1,8 @@
-import yaml
 from sqlalchemy import create_engine, inspect
-import pandas as pd
 from sqlalchemy.exc import SQLAlchemyError
 from typing import Dict, List
+import pandas as pd
+import yaml
 
 
 class DatabaseConnector:

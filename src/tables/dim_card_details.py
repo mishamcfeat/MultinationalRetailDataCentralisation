@@ -1,15 +1,15 @@
-from database_utils import DatabaseConnector
-from data_cleaning import DataCleaning
-from data_extraction import DataExtractor
+from src.database_utils import DatabaseConnector
+from src.data_cleaning import DataCleaning
+from src.data_extraction import DataExtractor
 
 if __name__ == '__main__':
     # Step 1: Extract Data
-    # extractor = DataExtractor()
-    # df_extracted = extractor.retrieve_pdf_data('https://data-handling-public.s3.eu-west-1.amazonaws.com/card_details.pdf')
+    extractor = DataExtractor()
+    df_extracted = extractor.retrieve_pdf_data('https://data-handling-public.s3.eu-west-1.amazonaws.com/card_details.pdf')
 
     # Step 2: Clean Data
     cleaner = DataCleaning()
-    df_cleaned = cleaner.clean_card_data('../csv/card_details.csv')
+    df_cleaned = cleaner.clean_card_data(df_extracted)
 
     # Step 3: Upload Cleaned Data
     db_connector_card_details = DatabaseConnector('../config/pgadmin_creds.yaml')

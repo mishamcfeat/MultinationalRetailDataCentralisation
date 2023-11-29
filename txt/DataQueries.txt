@@ -1,0 +1,156 @@
+# Task 1
+SELECT 
+    count(country_code) as total_no_stores, 
+    country_code
+FROM 
+    dim_store_details
+GROUP BY 
+    country_code
+
+# Task 2
+SELECT 
+    COUNT(*) AS total_no_stores, 
+    locality
+FROM 
+    dim_store_details
+GROUP BY 
+    locality
+HAVING 
+    COUNT(*) >= 10
+ORDER BY 
+    total_no_stores DESC;
+
+# Task 3
+SELECT 
+    dim_date_times.month,
+    ROUND(SUM(orders_table.product_quantity * dim_products.product_price_pounds)::numeric, 2) AS total_sales
+FROM 
+    orders_table
+JOIN 
+    dim_date_times ON orders_table.date_uuid = dim_date_times.date_uuid
+JOIN 
+    dim_products ON orders_table.product_code = dim_products.product_code
+GROUP BY 
+    dim_date_times.month
+ORDER BY 
+    total_sales DESC
+LIMIT 6;
+
+# Task 4
+SELECT 
+    COUNT(*) AS numbers_of_sales,
+    SUM(product_quantity) AS product_quantity_count,
+    'Web' AS location
+FROM orders_table
+WHERE store_code = 'WEB-1388012W'
+
+UNION ALL
+
+SELECT 
+    COUNT(*) AS numbers_of_sales,
+    SUM(product_quantity) AS product_quantity_count,
+    'Offline' AS location
+FROM orders_table
+WHERE store_code != 'WEB-1388012W';
+
+# Task 5
+WITH sales_cte AS (
+    SELECT
+        SUM(dim_products.product_price_pounds * orders_table.product_quantity) AS total_sales
+    FROM orders_table
+    JOIN dim_products ON orders_table.product_code = dim_products.product_code
+)
+
+SELECT 
+    dim_store_details.store_type,
+    ROUND(SUM(dim_products.product_price_pounds * orders_table.product_quantity)::numeric, 2) AS total_sales,
+    ROUND(((SUM(dim_products.product_price_pounds * orders_table.product_quantity) * 100)/ (SELECT total_sales FROM sales_cte))::numeric, 2) AS "percentage_total(%)"
+FROM orders_table
+JOIN dim_store_details ON orders_table.store_code = dim_store_details.store_code
+JOIN dim_products ON orders_table.product_code = dim_products.product_code
+GROUP BY dim_store_details.store_type;
+
+# Task 6
+SELECT 
+	ROUND(SUM(dim_products.product_price_pounds * orders_table.product_quantity)::numeric, 2) AS total_sales,
+	year, 
+	month 
+FROM orders_table
+JOIN dim_products ON orders_table.product_code = dim_products.product_code
+JOIN dim_date_times ON orders_table.date_uuid = dim_date_times.date_uuid
+GROUP BY year, month
+ORDER BY total_sales DESC
+LIMIT 10;
+
+# Task 7
+SELECT 
+	SUM(staff_numbers) AS total_staff_numbers, 
+	country_code 
+FROM dim_store_details
+GROUP BY country_code
+ORDER BY total_staff_numbers DESC
+
+# Task 8
+SELECT 
+	ROUND(SUM(dim_products.product_price_pounds * orders_table.product_quantity)::numeric, 2) AS total_sales, 
+	dim_store_details.store_type,
+	'DE' AS country_code
+FROM orders_table
+JOIN dim_store_details ON orders_table.store_code = dim_store_details.store_code
+JOIN dim_products ON orders_table.product_code = dim_products.product_code
+WHERE country_code = 'DE'
+GROUP by store_type
+ORDER BY total_sales ASC
+
+# Task 9 (time values are different however this is the correct implementation and results)
+WITH TimeDifferences AS (
+    SELECT 
+        year,
+        LEAD(timestamp) OVER (PARTITION BY year ORDER BY timestamp) - timestamp AS time_diff
+    FROM dim_date_times
+),
+
+
+AvgTimeDifferences AS (
+    SELECT 
+        year,
+        AVG(time_diff) AS avg_time_diff
+    FROM TimeDifferences
+    WHERE time_diff IS NOT NULL
+    GROUP BY year
+)
+
+SELECT 
+    year,
+    JSON_BUILD_OBJECT(
+        'hours', EXTRACT(HOUR FROM avg_time_diff), 
+        'minutes', EXTRACT(MINUTE FROM avg_time_diff), 
+        'seconds', EXTRACT(SECOND FROM avg_time_diff)
+    ) AS actual_time_taken
+FROM AvgTimeDifferences
+ORDER BY avg_time_diff DESC;
+
+
+# Task 9 (Second attempt - different implementation but gets results like requested table)
+SELECT 
+    year,
+    FORMAT(
+        '"hours": %s, "minutes": %s, "seconds": %s',
+        FLOOR(average_seconds / 3600),
+        FLOOR((average_seconds % 3600) / 60),
+        average_seconds % 60
+    ) AS actual_time_taken,
+    average_seconds
+FROM (
+    SELECT 
+        year,
+        COUNT(*) AS total_sales,
+        (365 * 24 * 60 * 60) / COUNT(*) AS average_seconds 
+    FROM 
+        dim_date_times
+	WHERE YEAR != '1992' AND YEAR != '2022'
+    GROUP BY 
+        year
+) AS YearlySales
+ORDER BY 
+    average_seconds DESC;

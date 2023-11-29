@@ -15,7 +15,6 @@ if __name__ == '__main__':
     db_connector_date_times = DatabaseConnector('../config/pgadmin_creds.yaml')
     db_connector_date_times.upload_to_db(df=df_cleaned, table_name='dim_date_times', primary_key='date_uuid')
 
-    
     # Step 4: Alter Column Data Types
     dim_date_times_table_mappings = {
         "timestamp": "TIME USING timestamp::time without time zone",
