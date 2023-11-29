@@ -12,7 +12,7 @@ if __name__ == '__main__':
     df_cleaned = cleaner.clean_card_data(df_extracted)
 
     # Step 3: Upload Cleaned Data
-    db_connector_card_details = DatabaseConnector('../config/pgadmin_creds.yaml')
+    db_connector_card_details = DatabaseConnector('../../config/pgadmin_creds.yaml')
     db_connector_card_details.upload_to_db(df=df_cleaned, table_name='dim_card_details', primary_key='card_number')
 
     # Step 4: Alter Column Data Types

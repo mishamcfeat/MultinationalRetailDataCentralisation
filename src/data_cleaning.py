@@ -358,5 +358,5 @@ def is_valid_uuid(uuid_to_test, version=4):
 
 if __name__ == "__main__":
     cleaner = DataCleaning()
-    df_cleaned = cleaner.clean_store_data("../csv/store_data.csv")
+    df_cleaned = cleaner.clean_store_data("../csv_files/store_data.csv")
     print(df_cleaned.head())
