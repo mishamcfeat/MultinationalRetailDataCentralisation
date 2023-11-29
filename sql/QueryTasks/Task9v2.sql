@@ -20,4 +20,5 @@ FROM (
         year
 ) AS YearlySales
 ORDER BY 
-    average_seconds DESC;
+    average_seconds DESC
+LIMIT 5;

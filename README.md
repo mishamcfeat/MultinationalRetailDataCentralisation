@@ -50,17 +50,10 @@ This project centralizes retail data from multiple international branches of our
     - `fk_product_code.sql`: Foreign key constraint for product code.
     - `fk_store_code.sql`: Foreign key constraint for store code.
     - `fk_user_uuid.sql`: Foreign key constraint for user UUID.
+  - `/QueryResults`: Contains CSV files for the results of QueryTasks files
+    - `Task1` - `Task9`: Contains all the csv results for tasks 1-9
   - `/QueryTasks`: Contains SQL scripts for specific query tasks.
-    - `Task1.sql`: Query for Task 1.
-    - `Task2.sql`: Query for Task 2.
-    - `Task3.sql`: Query for Task 3.
-    - `Task4.sql`: Query for Task 4.
-    - `Task5.sql`: Query for Task 5.
-    - `Task6.sql`: Query for Task 6.
-    - `Task7.sql`: Query for Task 7.
-    - `Task8.sql`: Query for Task 8.
-    - `Task9.sql`: Query for Task 9.
-    - `Task9v2.sql`: Second version of the query for Task
+    - `Task1` - `Task9`: Contains all the SQL scripts for tasks 1-9
 - `requirements.txt`: Lists all the Python dependencies for the project.
 
 ## Contributing
