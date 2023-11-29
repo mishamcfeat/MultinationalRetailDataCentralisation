@@ -5,7 +5,7 @@ from src.data_extraction import DataExtractor
 if __name__ == '__main__':
     # Step 1: Extract Data
     extractor = DataExtractor()
-    db_connector = DatabaseConnector('../config/db_creds.yaml')  # Connects to your source database
+    db_connector = DatabaseConnector('../../config/db_creds.yaml')  # Connects to your source database
     df_extracted = extractor.read_rds_table(db_connector, 'orders_table')
 
     # Step 2: Clean Data
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     df_cleaned = cleaner.clean_orders_data(df_extracted)
 
     # Step 3: Upload Cleaned Data
-    db_connector_orders_data = DatabaseConnector('../config/pgadmin_creds.yaml')
+    db_connector_orders_data = DatabaseConnector('../../config/pgadmin_creds.yaml')
     db_connector_orders_data.upload_to_db(df=df_cleaned, table_name='orders_table', primary_key='order_id')
 
     # Step 4: Alter Column Data Types

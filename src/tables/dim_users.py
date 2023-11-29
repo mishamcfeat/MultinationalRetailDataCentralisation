@@ -5,7 +5,7 @@ from src.data_extraction import DataExtractor
 if __name__ == '__main__':
     # Step 1: Extract Data
     extractor = DataExtractor()
-    db_connector = DatabaseConnector('../config/db_creds.yaml')
+    db_connector = DatabaseConnector('../../config/db_creds.yaml')
     df_extracted = extractor.read_rds_table(db_connector, 'legacy_users')
 
     # Step 2: Clean Data
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     df_cleaned = cleaner.clean_user_data(df_extracted)
 
     # Step 3: Alter Column Data Types
-    db_connector_sales_data = DatabaseConnector('../config/pgadmin_creds.yaml')
+    db_connector_sales_data = DatabaseConnector('../../config/pgadmin_creds.yaml')
     db_connector_sales_data.upload_to_db(df=df_cleaned, table_name='dim_users', primary_key='user_uuid')
 
     dim_users_table_mappings = {

@@ -12,7 +12,7 @@ if __name__ == '__main__':
     df_cleaned = cleaner.clean_date_times(df_extracted)
 
     # Step 3: Upload Cleaned Data
-    db_connector_date_times = DatabaseConnector('../config/pgadmin_creds.yaml')
+    db_connector_date_times = DatabaseConnector('../../config/pgadmin_creds.yaml')
     db_connector_date_times.upload_to_db(df=df_cleaned, table_name='dim_date_times', primary_key='date_uuid')
 
     # Step 4: Alter Column Data Types

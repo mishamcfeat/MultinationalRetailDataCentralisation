@@ -13,7 +13,7 @@ if __name__ == '__main__':
     df_cleaned = cleaner.clean_products_data(df_converted)
 
     # Step 3: Upload Cleaned Data
-    db_connector_product_data = DatabaseConnector('../config/pgadmin_creds.yaml')
+    db_connector_product_data = DatabaseConnector('../../config/pgadmin_creds.yaml')
     db_connector_product_data.upload_to_db(df=df_cleaned, table_name='dim_products', primary_key='product_code')
 
     # Step 4: Alter Column Data Types

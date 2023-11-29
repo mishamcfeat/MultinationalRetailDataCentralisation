@@ -9,10 +9,10 @@ if __name__ == "__main__":
 
     # Step 2: Clean Data
     cleaner = DataCleaning()
-    df_cleaned = cleaner.clean_store_data('../csv/store_data.csv')
+    df_cleaned = cleaner.clean_store_data('../../csv/store_data.csv')
 
     # Step 3: Upload Cleaned Data
-    db_connector_store_data = DatabaseConnector("../config/pgadmin_creds.yaml")
+    db_connector_store_data = DatabaseConnector("../../config/pgadmin_creds.yaml")
     db_connector_store_data.upload_to_db(df=df_cleaned, table_name='dim_store_details', primary_key='store_code')
 
     # # Step 4: Alter Column Data Types
