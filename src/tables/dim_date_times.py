@@ -1,7 +1,6 @@
 from src.database_utils import DatabaseConnector
 from src.data_cleaning import DataCleaning
 from src.data_extraction import DataExtractor
-import pandas as pd
 
 if __name__ == '__main__':
     # Step 1: Extract Data
