@@ -7,9 +7,22 @@ import uuid
 
 
 class DataCleaning:
+    """
+    The DataCleaning class provides methods to clean and standardize various types of data including user,
+    card, store, and product data. It handles tasks like format normalization, data type conversions,
+    removal of invalid entries, and setting appropriate data types.
+    """
     def clean_user_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Cleans user data DataFrame.
+        Cleans the user data DataFrame by performing operations like removing null values, converting date columns
+        to datetime format, standardizing country codes, validating phone numbers, and ensuring valid UUIDs. It
+        also filters out entries with invalid or incomplete data.
+
+        Args:
+            df (pd.DataFrame): DataFrame containing user data.
+
+        Returns:
+            pd.DataFrame: Cleaned and standardized user data DataFrame.
         """
         # Removes null values and sets index column
         self._clean_dataframe(df=df, index="index")
@@ -25,27 +38,27 @@ class DataCleaning:
         # Correct errors in 'country_code' for entries from the United Kingdom
         df.loc[df["country"] == "United Kingdom", "country_code"] = "GB"
 
-        # # Define regular expressions for phone number validation
-        # uk_regex = r"^(?:(?:\+44\s?\(0\)\s?\d{2,4}|\(?\d{2,5}\)?)\s?\d{3,4}\s?\d{3,4}$|\d{10,11}|\+44\s?\d{2,5}\s?\d{3,4}\s?\d{3,4})$"
-        # de_regex = r"(\(?([\d \-\)\–\+\/\(]+){6,}\)?([ .\-–\/]?)([\d]+))"
-        # us_regex = r"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
+        # Define regular expressions for phone number validation
+        uk_regex = r"^(?:(?:\+44\s?\(0\)\s?\d{2,4}|\(?\d{2,5}\)?)\s?\d{3,4}\s?\d{3,4}$|\d{10,11}|\+44\s?\d{2,5}\s?\d{3,4}\s?\d{3,4})$"
+        de_regex = r"(\(?([\d \-\)\–\+\/\(]+){6,}\)?([ .\-–\/]?)([\d]+))"
+        us_regex = r"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"
 
-        # # Filter out invalid phone numbers based on regex patterns
-        # df.loc[
-        #     (df["country_code"] == "GB")
-        #     & (~df["phone_number"].astype(str).str.match(uk_regex)),
-        #     "phone_number",
-        # ] = np.nan
-        # df.loc[
-        #     (df["country_code"] == "DE")
-        #     & (~df["phone_number"].astype(str).str.match(de_regex)),
-        #     "phone_number",
-        # ] = np.nan
-        # df.loc[
-        #     (df["country_code"] == "US")
-        #     & (~df["phone_number"].astype(str).str.match(us_regex)),
-        #     "phone_number",
-        # ] = np.nan
+        # Filter out invalid phone numbers based on regex patterns
+        df.loc[
+            (df["country_code"] == "GB")
+            & (~df["phone_number"].astype(str).str.match(uk_regex)),
+            "phone_number",
+        ] = np.nan
+        df.loc[
+            (df["country_code"] == "DE")
+            & (~df["phone_number"].astype(str).str.match(de_regex)),
+            "phone_number",
+        ] = np.nan
+        df.loc[
+            (df["country_code"] == "US")
+            & (~df["phone_number"].astype(str).str.match(us_regex)),
+            "phone_number",
+        ] = np.nan
 
         # Filter out entries with invalid 'user_uuid'
         df = df[df["user_uuid"].apply(lambda x: is_valid_uuid(x))]
@@ -61,7 +74,15 @@ class DataCleaning:
 
     def clean_card_data(self, csv_file: str) -> pd.DataFrame:
         """
-        Cleans card data DataFrame.
+        Reads and cleans card data from a CSV file. It includes operations like reading data, removing null values,
+        standardizing date formats, correcting invalid card numbers, and dropping rows with missing values after
+        these operations.
+
+        Args:
+            csv_file (str): Path to the CSV file containing card data.
+
+        Returns:
+            pd.DataFrame: DataFrame containing cleaned card data.
         """
         # Read data from CSV
         df = pd.read_csv(csv_file)
@@ -83,7 +104,15 @@ class DataCleaning:
 
     def clean_store_data(self, csv_file: str) -> pd.DataFrame:
         """
-        Cleans store data from a CSV file.
+        Cleans store data from a CSV file. This includes reading the data, dropping irrelevant columns,
+        filling null values, standardizing country codes, correcting misspelled continent names, processing staff
+        numbers, and handling date formats. It drops rows with missing values after these operations.
+
+        Args:
+            csv_file (str): Path to the CSV file containing store data.
+
+        Returns:
+            pd.DataFrame: DataFrame containing cleaned store data.
         """
         # Read data from CSV
         df = pd.read_csv(csv_file)
@@ -127,15 +156,15 @@ class DataCleaning:
 
     def convert_product_weights(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Converts product weights to kilograms. Handles weights in various formats,
-        including those with multiplication (e.g., '5 x 145g') and different units (g, ml).
-        Assumes a 1:1 ratio for ml to g for conversion.
+        Converts product weights to kilograms from various formats such as grams, milliliters, or expressions 
+        involving multiplication (e.g., '5 x 145g'). It creates a new column 'weight_kg' and drops the original 
+        'weight' column.
 
         Args:
             df (pandas.DataFrame): DataFrame containing product data with a 'weight' column.
 
         Returns:
-            pandas.DataFrame: Updated DataFrame with a new column 'weight_kg' representing weights in kg.
+            pandas.DataFrame: Updated DataFrame with weights converted to kg in the 'weight_kg' column.
         """
 
         def convert_to_kg(weight_str):
@@ -185,13 +214,15 @@ class DataCleaning:
 
     def clean_products_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Cleans the DataFrame of any additional erroneous values.
+        Cleans product data in the DataFrame by standardizing text fields, converting price formats, renaming columns
+        for clarity, converting boolean fields, and validating UUIDs. It also includes operations for date formatting
+        and categorizing products based on weight.
 
         Args:
-            df (pandas.DataFrame): DataFrame containing product data.
+            df (pd.DataFrame): DataFrame containing product data.
 
         Returns:
-            pandas.DataFrame: Cleaned DataFrame.
+            pd.DataFrame: DataFrame containing cleaned product data.
         """
 
         # Removes null values and sets index column
@@ -237,15 +268,14 @@ class DataCleaning:
 
     def clean_orders_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Cleans the orders table data by removing specified columns,
-        setting the index, replacing 'NULL' values with NaN, and
-        converting data types where necessary.
+        Cleans the orders DataFrame by removing specified columns, setting the index, replacing 'NULL' values with NaN,
+        and ensuring all entries have valid UUIDs. It drops rows with missing values after these operations.
 
-        Parameters:
-        df (DataFrame): A pandas DataFrame containing the orders data.
+        Args:
+            df (pd.DataFrame): DataFrame containing orders data.
 
         Returns:
-        DataFrame: A cleaned DataFrame.
+            pd.DataFrame: Cleaned orders DataFrame.
         """
 
         # Remove the specified columns
@@ -270,13 +300,14 @@ class DataCleaning:
 
     def clean_date_times(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Cleans the date_times data.
+        Cleans the date_times DataFrame by removing null values, validating time periods against a predefined list,
+        and setting an appropriate index. 
 
         Args:
-            df (pd.DataFrame): DataFrame containing the date_times data.
+            df (pd.DataFrame): DataFrame containing date_times data.
 
         Returns:
-            pd.DataFrame: Cleaned DataFrame.
+            pd.DataFrame: Cleaned date_times DataFrame.
         """
         # Removes null values and sets index column
         self._clean_dataframe(df=df)
@@ -285,28 +316,12 @@ class DataCleaning:
         valid_time_periods = ["Late_Hours", "Morning", "Midday", "Evening"]
         df = df[df["time_period"].isin(valid_time_periods)]
 
-        # Combine year, month, day, and timestamp into one 'date_time' column
-        # df["date_time"] = pd.to_datetime(
-        #     {
-        #         "year": df["year"],
-        #         "month": df["month"],
-        #         "day": df["day"],
-        #         "hour": df["timestamp"].str.split(":").str[0],
-        #         "minute": df["timestamp"].str.split(":").str[1],
-        #         "second": df["timestamp"].str.split(":").str[2],
-        #     }
-        # )
-
-        # # Drop the original columns
-        # df.drop(
-        #     columns=["year", "month", "day", "timestamp", "time_period"], inplace=True
-        # )
-
         return df
 
     def _clean_dataframe(self, df: pd.DataFrame, index: str = None) -> None:
         """
-        Replaces 'NULL' strings with NaN, removes duplicates, and drops rows with NaN values.
+        A helper method to perform basic cleaning operations on a DataFrame. It replaces 'NULL' strings with NaN,
+        removes duplicates, drops rows with NaN values, and sets a specified column as the DataFrame index.
 
         Args:
             df (pd.DataFrame): DataFrame to be cleaned.
@@ -314,6 +329,7 @@ class DataCleaning:
         """
         # Replace 'NULL' strings with NaN, remove duplicates, and drop rows with NaN values
         df.replace("NULL", np.nan, inplace=True)
+        df.drop_duplicates(inplace=True)
         df.dropna(inplace=True)
         
         # Set 'index' as the new DataFrame index if provided
@@ -323,7 +339,8 @@ class DataCleaning:
 
 def is_valid_uuid(uuid_to_test, version=4):
     """
-    Check if uuid_to_test is a valid UUID.
+    Validates whether the given string is a valid UUID of the specified version. It checks the format and the
+    version of the UUID.
 
     Args:
         uuid_to_test (str): The string to test for being a valid UUID.

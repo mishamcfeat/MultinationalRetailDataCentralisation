@@ -16,7 +16,6 @@ if __name__ == '__main__':
     db_connector_sales_data = DatabaseConnector('../config/pgadmin_creds.yaml')
     db_connector_sales_data.upload_to_db(df=df_cleaned, table_name='dim_users', primary_key='user_uuid')
 
-
     dim_users_table_mappings = {
         "first_name": "VARCHAR(255)",
         "last_name": "VARCHAR(255)",

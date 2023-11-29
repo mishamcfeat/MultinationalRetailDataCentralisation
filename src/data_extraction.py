@@ -8,9 +8,12 @@ import boto3
 
 class DataExtractor:
     """
-    DataExtractor class for extracting data from various sources including databases, PDFs, and APIs.
+    DataExtractor class for extracting data from various sources including databases, PDFs, APIs, and AWS S3.
+    This class provides methods to interface with different types of data storage and formats, facilitating
+    the extraction and transformation of data into usable pandas DataFrames.
     """
-
+    
+    # API headers and URLs for extracting store data
     HEADER = {"x-api-key": "[REDACTED]"}
     NUMBER_OF_STORES_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/number_stores"
     STORE_DETAILS_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/store_details"
@@ -18,14 +21,15 @@ class DataExtractor:
 
     def read_rds_table(self, db_connector: DatabaseConnector, table_name: str) -> pd.DataFrame:
         """
-        Reads a table from a relational database system (RDS).
+        Reads a table from a relational database system (RDS) using a DatabaseConnector instance. 
+        It checks for table existence in the database before attempting to read it.
 
         Args:
             db_connector (DatabaseConnector): An instance of DatabaseConnector for database connection.
             table_name (str): The name of the table to be read.
 
         Returns:
-            DataFrame: A DataFrame containing the data from the specified table.
+            pd.DataFrame: A DataFrame containing the data from the specified table.
 
         Raises:
             TypeError: If db_connector is not an instance of DatabaseConnector.
@@ -44,13 +48,14 @@ class DataExtractor:
 
     def retrieve_pdf_data(self, link: str) -> pd.DataFrame:
         """
-        Extracts data from a PDF file available at the specified URL.
+        Extracts data from a PDF file available at the specified URL. This method uses the 'tabula' library
+        to read tables from the PDF and combines them into a single DataFrame.
 
         Args:
             link (str): URL of the PDF file.
 
         Returns:
-            DataFrame: A DataFrame combining all the tables extracted from the PDF.
+            pd.DataFrame: A DataFrame combining all the tables extracted from the PDF.
         """
         # Extract and combine tables from the PDF into a single DataFrame
         dfs = tabula.read_pdf(
@@ -61,7 +66,18 @@ class DataExtractor:
 
     def list_number_of_stores(self, url=NUMBER_OF_STORES_URL, headers=HEADER) -> dict:
         """
-        Retrieves the number of stores from the API.
+        Retrieves the number of stores from a specified API endpoint. This method sends a GET request to the API and
+        returns the response in JSON format.
+
+        Args:
+            url (str, optional): API endpoint URL. Defaults to NUMBER_OF_STORES_URL.
+            headers (dict, optional): Request headers. Defaults to HEADER.
+
+        Returns:
+            dict: A dictionary containing the API response.
+
+        Raises:
+            Exception: If the API request fails with a non-200 status code.
         """
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
@@ -71,7 +87,16 @@ class DataExtractor:
 
     def retrieve_stores_data(self, number_of_stores=451, base_url=STORE_DETAILS_URL, headers=HEADER) -> pd.DataFrame:
         """
-        Retrieves details for each store from the API.
+        Retrieves details for a specified number of stores from an API. This method iteratively sends GET requests
+        to the API for each store and compiles the results into a DataFrame.
+
+        Args:
+            number_of_stores (int, optional): Number of stores to retrieve. Defaults to 451.
+            base_url (str, optional): Base URL for the API endpoint. Defaults to STORE_DETAILS_URL.
+            headers (dict, optional): Request headers. Defaults to HEADER.
+
+        Returns:
+            pd.DataFrame: DataFrame containing details for each store.
         """
         all_stores = []
         for store_number in range(0, number_of_stores):
@@ -86,14 +111,17 @@ class DataExtractor:
 
     def extract_from_s3(self, s3_url: str) -> pd.DataFrame:
         """
-        Extracts data from an S3 bucket given an HTTP S3 URL. Determines the file
-        type (CSV or JSON) based on the URL and reads the data accordingly.
+        Extracts data from an AWS S3 bucket using the provided HTTP S3 URL. This method determines the file type
+        (either CSV or JSON) from the URL and reads the data into a DataFrame accordingly.
 
         Args:
             s3_url (str): HTTP URL to the S3 file.
 
         Returns:
-            DataFrame: Data extracted from the S3 file.
+            pd.DataFrame: DataFrame containing data extracted from the S3 file.
+
+        Raises:
+            ValueError: If the file type is neither CSV nor JSON.
         """
         # Parse bucket name and file path from s3_url
         bucket_name = s3_url.split('/')[2].split('.')[0]
@@ -119,24 +147,6 @@ class DataExtractor:
 
 if __name__ == "__main__":
     extractor = DataExtractor()
-    # df = extractor.read_rds_table(db_connector=DatabaseConnector('../config/db_creds.yaml'), table_name='legacy_users')
-    # df = extractor.retrieve_pdf_data('https://data-handling-public.s3.eu-west-1.amazonaws.com/card_details.pdf')
-
-    # number_of_stores = extractor.list_number_of_stores()
-    # print(number_of_stores)
-
-    # # Fetching store data and saving it to a CSV file
-    # store_data = extractor.retrieve_stores_data(number_of_stores["number_stores"])
-    # store_data.to_csv("store_data.csv", index=False) 
-
-    # data = extractor.extract_from_s3()
-
-    # df = extractor.read_rds_table(db_connector=DatabaseConnector('../config/db_creds.yaml'), table_name='orders_table')
-    # print(df.head())
-
-    # data_json = extractor.extract_from_s3('https://data-handling-public.s3.eu-west-1.amazonaws.com/date_details.json')
-    # print(data_json)
-    # Constants
     HEADER = {"x-api-key": "[REDACTED]"}
     NUMBER_OF_STORES_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/number_stores"
     STORE_DETAILS_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/store_details"
