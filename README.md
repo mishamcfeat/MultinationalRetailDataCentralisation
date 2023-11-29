@@ -11,12 +11,14 @@ This project centralizes retail data from multiple international branches of our
 ## Installation
 1. Clone the repository: `git clone [repository-url]`
 2. Install required dependencies: `pip install -r requirements.txt`
-3. Set up your database credentials in config folder with yaml files e.g. `config.yaml`
+3. Set up your database credentials in config folder with yaml files e.g. `pgadmin_creds.yaml`
 
 ## Usage
 - To extract data: Use methods from the DataExtractor class in `data_extraction.py`
 - For data cleaning: Use methods from the DataCleaning class in `data_cleaning.py`
 - To upload data to the database: Use methods from the DatabaseConnector class in `database_utils.py`
+- Set up the Foreign Key Constraints using the Foreign Keys folder files.
+- Query as required to collect up-to-date metrics of the data
 
 ## File Structure
 
@@ -62,7 +64,7 @@ This project centralizes retail data from multiple international branches of our
 - `requirements.txt`: Lists all the Python dependencies for the project.
 
 ## Contributing
-We welcome contributions to this project. Please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+Please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
