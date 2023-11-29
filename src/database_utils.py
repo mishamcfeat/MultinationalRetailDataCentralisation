@@ -7,15 +7,17 @@ import yaml
 
 class DatabaseConnector:
     """
-    A class to handle database connections and operations.
+    A class to handle database connections and operations. It supports reading database credentials,
+    initializing database connections, executing various database operations like listing tables,
+    altering column data types, uploading data, and executing custom SQL commands.
 
     Attributes:
-        creds (Dict[str, str]): Database credentials.
+        creds (dict[str, str]): Database credentials.
     """
 
     def __init__(self, file_name: str):
         """
-        Initializes the DatabaseConnector with credentials from a YAML file.
+        Initialises the DatabaseConnector with credentials read from a specified YAML file.
 
         Args:
             file_name (str): Path to the YAML file containing database credentials.
@@ -24,13 +26,13 @@ class DatabaseConnector:
 
     def read_db_creds(self, file_name: str) -> Dict[str, str]:
         """
-        Reads database credentials from a YAML file.
+        Reads database credentials from a YAML file and returns them as a dictionary.
 
         Args:
             file_name (str): Path to the YAML file.
 
         Returns:
-            Dict[str, str]: Database credentials.
+            dict[str, str]: Database credentials.
         """
         with open(file_name, 'r') as f:
             creds = yaml.safe_load(f)
@@ -38,10 +40,11 @@ class DatabaseConnector:
 
     def init_db_engine(self) -> create_engine:
         """
-        Initializes and returns a SQLAlchemy engine using stored credentials.
+        Initialises and returns a SQLAlchemy engine for database interaction using stored credentials.
+        The engine is configured for a PostgreSQL database using psycopg2 as the DBAPI.
 
         Returns:
-            create_engine: A SQLAlchemy engine instance.
+            create_engine: A SQLAlchemy engine instance configured for the database.
         """
         creds = self.creds
         engine = create_engine(f"postgresql+psycopg2://{creds['RDS_USER']}:{creds['RDS_PASSWORD']}@{creds['RDS_HOST']}:{creds['RDS_PORT']}/{creds['RDS_DATABASE']}")
@@ -49,10 +52,10 @@ class DatabaseConnector:
 
     def list_db_tables(self) -> List[str]:
         """
-        Lists all tables in the connected database.
+        Lists all tables in the connected database by querying the database metadata.
 
         Returns:
-            List[str]: A list of table names.
+            List[str]: A list of table names available in the database.
         """
         engine = self.init_db_engine()
         inspector = inspect(engine)
@@ -60,7 +63,8 @@ class DatabaseConnector:
 
     def alter_column_data_types(self, table_name: str, column_type_mappings: dict) -> None:
         """
-        Alters the data types of specified columns in a table.
+        Alters the data types of specified columns in a given table. The method iteratively
+        executes ALTER TABLE commands for each column and its corresponding new data type.
 
         Args:
             table_name (str): The name of the table to alter.
@@ -80,12 +84,13 @@ class DatabaseConnector:
 
     def upload_to_db(self, df: pd.DataFrame, table_name: str, primary_key: str = None) -> None:
         """
-        Uploads a DataFrame to a specified table in the database and sets a primary key.
+        Uploads a DataFrame to a specified table in the database. If the table exists, it is replaced.
+        Optionally sets a primary key on the specified column after the upload.
 
         Args:
             df (pd.DataFrame): The DataFrame to upload.
             table_name (str): The name of the target table in the database.
-            primary_key (str): The column name to be set as the primary key.
+            primary_key (str, optional): The column name to be set as the primary key.
 
         Raises:
             ValueError: If df is not a pandas DataFrame.
@@ -107,7 +112,8 @@ class DatabaseConnector:
             
     def execute_sql(self, sql: str) -> None:
         """
-        Executes an SQL command in the connected database.
+        Executes a custom SQL command in the connected database. This method is useful for database operations
+        that are not covered by other methods in this class.
 
         Args:
             sql (str): The SQL command to execute.
@@ -122,7 +128,6 @@ class DatabaseConnector:
             print(f"SQL command executed successfully.")
         except SQLAlchemyError as e:
             print(f"An error occurred while executing SQL command:", e)
-
 
 
 if __name__ == '__main__':
