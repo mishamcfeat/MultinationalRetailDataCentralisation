@@ -6,9 +6,7 @@ This project centralizes retail data from multiple international branches of our
 ## Features
 - **Data Extraction**: Automated extraction from diverse sources including SQL databases, CSV files, and web APIs.
 - **Data Cleaning**: Robust preprocessing to handle inconsistencies, missing values, and outliers.
-- **Database Management**: Efficient storage and retrieval using a centralized SQL database.
-- **Data Analysis Tools**: Custom tools for data analysis, including sales trends, customer behavior, and inventory management.
-- **Reporting**: Automated generation of reports for business insights and decision-making.
+- **Database Management**: Efficient storage and retrieval using a centralised SQL database.
 
 ## Installation
 1. Clone the repository: `git clone [repository-url]`
@@ -40,6 +38,11 @@ This project centralizes retail data from multiple international branches of our
     - `dim_card_details.py`: Card details dimension table script.
     - `dim_store_details.py`: Store details dimension table script.
     - `dim_users.py`: User dimension table script.
+    - `dim_date_times.py`: Date Times dimension table script.
+    - `orders_table.py`: Orders dimension table script.
+- `/text`: Text files containing Foreign Key constraints and SQL queries
+ - `DataQueries.txt`: Contains all queries for Milestone 4: Querying the data.
+ - `SQLconstraints.txt`: Contains all Foregin Key constraints for Orders table
 - `requirements.txt`: Lists all the Python dependencies for the project.
 
 ## Contributing
