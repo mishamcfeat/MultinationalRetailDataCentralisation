@@ -14,9 +14,9 @@ class DataExtractor:
     """
     
     # API headers and URLs for extracting store data
-    HEADER = {"x-api-key": "[REDACTED]"}
-    NUMBER_OF_STORES_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/number_stores"
-    STORE_DETAILS_URL = "https://aqj7u5id95.execute-api.eu-west-1.amazonaws.com/prod/store_details"
+    HEADER = {"x-api-key": ""}
+    NUMBER_OF_STORES_URL = ""
+    STORE_DETAILS_URL = ""
     S3_PATH = "s3://data-handling-public/products.csv"
 
     def read_rds_table(self, db_connector: DatabaseConnector, table_name: str) -> pd.DataFrame:
