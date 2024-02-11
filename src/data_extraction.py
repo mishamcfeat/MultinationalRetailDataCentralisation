@@ -14,7 +14,7 @@ class DataExtractor:
     """
     
     # API headers and URLs for extracting store data
-    HEADER = {"x-api-key": ""}
+    HEADER = {"x-api-key": "redacted"}
     NUMBER_OF_STORES_URL = ""
     STORE_DETAILS_URL = ""
     S3_PATH = "s3://data-handling-public/products.csv"
