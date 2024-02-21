@@ -30,3 +30,5 @@ var/
 .installed.cfg
 *.egg
 __pycache__/
+*.pyc
+*.pyc
